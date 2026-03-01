@@ -372,7 +372,7 @@ function HomePage() {
           <div className="problem-image reveal" style={{ '--delay': '0.12s' }}>
             <img
               src="/images/problem.jpg"
-              alt="UniBand on a desk — minimal campus lifestyle"
+              alt="UniBand AI lecture recorder on a desk — minimal campus lifestyle"
             />
           </div>
         </div>
@@ -476,7 +476,7 @@ function HomePage() {
           <div className="showcase-image reveal">
             <img
               src="/images/wristband.png"
-              alt="UniBand AI interface concept"
+              alt="UniBand AI lecture recorder wearable interface concept"
             />
           </div>
           <div className="showcase-text reveal" style={{ '--delay': '0.12s' }}>
@@ -521,7 +521,7 @@ function HomePage() {
           <div className="showcase-image reveal">
             <img
               src="/images/unnamed-8.jpg"
-              alt="UniBand wearable in minimal lighting"
+              alt="UniBand AI lecture recorder wearable in minimal lighting"
             />
           </div>
           <div className="showcase-text reveal" style={{ '--delay': '0.12s' }}>
@@ -750,7 +750,10 @@ function AboutPage() {
       title="About UniBand"
       subtitle="We believe every student deserves a personal lecture companion — regardless of language, learning style, or background."
     >
-
+      <Helmet>
+        <title>About Us - UniBand AI Lecture Recorder</title>
+        <meta name="description" content="Learn about our mission to reimagine how students capture and understand their lectures with the UniBand AI lecture wearable device." />
+      </Helmet>
       {/* Mission statement */}
       <section className="section">
         <div className="container">
@@ -780,7 +783,7 @@ function AboutPage() {
       <section className="section alt">
         <div className="container about-story-grid">
           <div className="about-story-image reveal">
-            <img src="/images/unnamed-9.jpg" alt="The UniBand story" />
+            <img src="/images/unnamed-9.jpg" alt="The UniBand story - AI lecture recorder wearable device" />
             <div className="about-story-quote-card">
               <p>"Making learning accessible, one lecture at a time"</p>
               <span>UniBand Team</span>
@@ -949,6 +952,10 @@ function FeaturesPage() {
       title="Features built for modern students"
       subtitle="Everything you need to capture, understand, and ace your lectures."
     >
+      <Helmet>
+        <title>Features - UniBand AI Lecture Transcription & Summaries</title>
+        <meta name="description" content="Explore UniBand's powerful AI features: real-time transcription, smart summaries, multi-language translation, and more." />
+      </Helmet>
       {/* Mission statement */}
       <section className="section features-mission">
         <div className="container">
@@ -1114,6 +1121,10 @@ function GetStartedPage() {
       title="Join UniBand Early Access"
       subtitle="Be the first to experience the future of academic learning. Secure your spot on our priority list today."
     >
+      <Helmet>
+        <title>Get Started - Join UniBand Early Access</title>
+        <meta name="description" content="Sign up for UniBand Early Access to get priority beta access, student discounts, and your first month free." />
+      </Helmet>
       <section className="section">
         <div className="container contact-grid-centered">
           <div className="contact-form-wrap reveal">
@@ -1278,7 +1289,7 @@ function BlogPage() {
           <div className="container blog-featured-inner reveal">
             <div className="blog-featured-image">
               <span className="blog-featured-badge">Read the latest</span>
-              <img src={featured.image} alt={featured.title} />
+              <img src={featured.image} alt={`${featured.title} - UniBand AI lecture recorder`} />
             </div>
             <div className="blog-featured-content reveal" style={{ '--delay': '0.1s' }}>
               <span className="pill">{featured.tag}</span>
@@ -1302,7 +1313,7 @@ function BlogPage() {
           {filtered.map((post, i) => (
             <article className="blog-card-v2 reveal" key={post.slug} style={{ '--delay': `${i * 0.05}s` }}>
               <Link to={`/blog/${post.slug}`} className="blog-card-image-link">
-                <img src={post.image} alt={post.title} className="blog-card-img" />
+                <img src={post.image} alt={`${post.title} - UniBand AI lecture recorder`} className="blog-card-img" />
               </Link>
               <div className="blog-card-body">
                 <div className="blog-card-meta-row">
@@ -1348,6 +1359,10 @@ function BlogPostPage() {
 
   return (
     <PageShell title={post.title} subtitle={`${post.date} · ${post.readTime}`}>
+      <Helmet>
+        <title>{post.title} - UniBand Blog</title>
+        <meta name="description" content={post.excerpt ? post.excerpt : `Read ${post.title} on the UniBand Blog`} />
+      </Helmet>
       <section className="section">
         <div className="container reveal">
           <p className="lead" style={{ color: 'var(--text-light-muted)' }}>{post.excerpt}</p>
@@ -1370,6 +1385,9 @@ function BlogPostPage() {
 function SimplePage({ title, body }) {
   return (
     <PageShell title={title}>
+      <Helmet>
+        <title>{title} - UniBand</title>
+      </Helmet>
       <section className="section">
         <div className="container reveal">
           <p className="lead" style={{ color: 'var(--text-light-muted)' }}>{body}</p>
