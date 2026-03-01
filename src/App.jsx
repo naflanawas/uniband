@@ -1342,7 +1342,7 @@ function BlogPage() {
 
 function BlogPostPage() {
   const { slug } = useParams()
-  const post = posts.find((item) => item.slug === slug)
+  const post = blogPosts.find((item) => item.slug === slug)
 
   if (!post) {
     return (
