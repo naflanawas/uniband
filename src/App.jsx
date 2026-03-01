@@ -18,7 +18,7 @@ const posts = [
     date: 'Feb 9, 2026',
     readTime: '4 min read',
     tag: 'Study',
-    image: 'public/images/noteTaking.png',
+    image: '/images/noteTaking.png',
   },
   {
     slug: 'learning-in-a-second-language',
@@ -28,7 +28,7 @@ const posts = [
     date: 'Feb 9, 2026',
     readTime: '5 min read',
     tag: 'Language',
-    image: 'public/images/card1.png',
+    image: '/images/card1.png',
   },
   {
     slug: 'revise-faster-with-summaries',
@@ -38,7 +38,7 @@ const posts = [
     date: 'Feb 9, 2026',
     readTime: '4 min read',
     tag: 'Revision',
-    image: 'public/images/card2.png',
+    image: '/images/card2.png',
   },
   {
     slug: 'wearable-tech-in-education',
@@ -48,7 +48,7 @@ const posts = [
     date: 'Jan 28, 2026',
     readTime: '6 min read',
     tag: 'Technology',
-    image: 'public/images/card3.png',
+    image: '/images/card3.png',
   },
   {
     slug: 'ai-powered-study-tools',
@@ -58,7 +58,7 @@ const posts = [
     date: 'Jan 20, 2026',
     readTime: '5 min read',
     tag: 'Technology',
-    image: 'public/images/card4.png',
+    image: '/images/card4.png',
   },
   {
     slug: 'managing-exam-stress',
@@ -68,7 +68,7 @@ const posts = [
     date: 'Jan 15, 2026',
     readTime: '4 min read',
     tag: 'Wellness',
-    image: 'public/images/card5.png',
+    image: '/images/card5.png',
   },
 ]
 
@@ -475,7 +475,7 @@ function HomePage() {
         <div className="container showcase-grid">
           <div className="showcase-image reveal">
             <img
-              src="public/images/wristband.png"
+              src="/images/wristband.png"
               alt="UniBand AI interface concept"
             />
           </div>
