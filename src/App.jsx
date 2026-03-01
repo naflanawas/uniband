@@ -754,12 +754,12 @@ function AboutPage() {
       {/* Mission statement */}
       <section className="section">
         <div className="container">
-          <h2 className="about-mission-heading">
+          <h2 className="about-mission-heading reveal">
             We're building the bridge between{' '}
             <span className="features-highlight">listening</span> and{' '}
             <span className="features-highlight">learning</span>
           </h2>
-          <div className="about-mission-text">
+          <div className="about-mission-text reveal" style={{ '--delay': '0.1s' }}>
             <p>
               In lecture halls around the world, students face the same impossible
               choice: listen carefully to the lecturer, or write everything down
@@ -779,14 +779,14 @@ function AboutPage() {
       {/* Origin story */}
       <section className="section alt">
         <div className="container about-story-grid">
-          <div className="about-story-image">
+          <div className="about-story-image reveal">
             <img src="/images/unnamed-9.jpg" alt="The UniBand story" />
             <div className="about-story-quote-card">
               <p>"Making learning accessible, one lecture at a time"</p>
               <span>UniBand Team</span>
             </div>
           </div>
-          <div className="about-story-content">
+          <div className="about-story-content reveal" style={{ '--delay': '0.15s' }}>
             <p className="eyebrow" style={{ color: 'var(--accent)' }}>Our Story</p>
             <h2>Born from a real student struggle</h2>
             <p>
@@ -813,31 +813,31 @@ function AboutPage() {
       {/* Who it's for */}
       <section className="section">
         <div className="container">
-          <p className="eyebrow" style={{ color: 'var(--accent)', textAlign: 'center' }}>Who It's For</p>
-          <h2 style={{ textAlign: 'center', marginBottom: '3rem' }}>Built for students like you</h2>
+          <p className="eyebrow reveal" style={{ color: 'var(--accent)', textAlign: 'center' }}>Who It's For</p>
+          <h2 className="reveal" style={{ textAlign: 'center', marginBottom: '3rem', '--delay': '0.05s' }}>Built for students like you</h2>
           <div className="about-audience-grid">
-            <div className="about-audience-card">
+            <div className="about-audience-card reveal" style={{ '--delay': '0.1s' }}>
               <div className="about-audience-icon">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z" /><path d="M6 12v5c3 3 10 3 12 0v-5" /></svg>
               </div>
               <h4>Undergraduates</h4>
               <p>Struggling to keep up in fast-paced lectures? UniBand captures everything so you can focus on understanding.</p>
             </div>
-            <div className="about-audience-card">
+            <div className="about-audience-card reveal" style={{ '--delay': '0.15s' }}>
               <div className="about-audience-icon">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10" /><line x1="2" y1="12" x2="22" y2="12" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
               </div>
               <h4>International Students</h4>
               <p>Learning in a second language is hard. Get bilingual transcripts and translations that bridge the gap.</p>
             </div>
-            <div className="about-audience-card">
+            <div className="about-audience-card reveal" style={{ '--delay': '0.2s' }}>
               <div className="about-audience-icon">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" /><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" /></svg>
               </div>
               <h4>STEM Students</h4>
               <p>Complex theory-heavy modules need full attention. Let UniBand handle the notes while you absorb the concepts.</p>
             </div>
-            <div className="about-audience-card">
+            <div className="about-audience-card reveal" style={{ '--delay': '0.25s' }}>
               <div className="about-audience-icon">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
               </div>
@@ -851,24 +851,24 @@ function AboutPage() {
       {/* Values pillars */}
       <section className="section alt">
         <div className="container">
-          <p className="eyebrow" style={{ color: 'var(--accent)', textAlign: 'center' }}>Our Values</p>
-          <h2 style={{ textAlign: 'center', marginBottom: '3rem' }}>What drives us</h2>
+          <p className="eyebrow reveal" style={{ color: 'var(--accent)', textAlign: 'center' }}>Our Values</p>
+          <h2 className="reveal" style={{ textAlign: 'center', marginBottom: '3rem', '--delay': '0.05s' }}>What drives us</h2>
           <div className="about-values-grid">
-            <div className="about-value-card">
+            <div className="about-value-card reveal" style={{ '--delay': '0.1s' }}>
               <div className="about-value-icon">
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
               </div>
               <h3>Privacy-First</h3>
               <p>You own your data. Recordings stay on your device until you decide otherwise. We're transparent about everything we do with your information.</p>
             </div>
-            <div className="about-value-card">
+            <div className="about-value-card reveal" style={{ '--delay': '0.15s' }}>
               <div className="about-value-icon">
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" /></svg>
               </div>
               <h3>Student-Centred</h3>
               <p>Every feature we build starts with a real student problem. We test with real students, in real lectures, solving real frustrations.</p>
             </div>
-            <div className="about-value-card">
+            <div className="about-value-card reveal" style={{ '--delay': '0.2s' }}>
               <div className="about-value-icon">
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
               </div>
@@ -911,14 +911,14 @@ function FeaturesPage() {
       icon: (
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /><polyline points="10 9 9 9 8 9" /></svg>
       ),
-      title: 'Accurate Transcription',
+      title: 'AI-Powered Real-Time Lecture Transcription',
       desc: 'AI-powered speech-to-text converts your lectures into clean, structured transcriptions with highlighted key terms and definitions.',
     },
     {
       icon: (
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
       ),
-      title: 'Smart Summaries',
+      title: 'Automated Lecture Summaries & Revision Points',
       desc: 'Get AI-generated bullet notes, topic sections, and quick revision summaries — perfect for exam prep and review sessions.',
     },
     {
@@ -952,8 +952,8 @@ function FeaturesPage() {
       {/* Mission statement */}
       <section className="section features-mission">
         <div className="container">
-          <p className="eyebrow" style={{ color: 'var(--accent)', textAlign: 'center' }}>Our Features</p>
-          <h2 className="features-mission-heading">
+          <p className="eyebrow reveal" style={{ color: 'var(--accent)', textAlign: 'center' }}>Our Features</p>
+          <h2 className="features-mission-heading reveal" style={{ '--delay': '0.1s' }}>
             Our Mission Is To Make Your{' '}
             <span className="features-highlight">Learning</span>{' '}
             Better Through Technology
@@ -964,8 +964,8 @@ function FeaturesPage() {
       {/* Feature cards grid */}
       <section className="section">
         <div className="container features-grid">
-          {features.map((feature) => (
-            <div className="feature-card-v2" key={feature.title}>
+          {features.map((feature, i) => (
+            <div className="feature-card-v2 reveal" key={feature.title} style={{ '--delay': `${i * 0.05}s` }}>
               <div className="feature-icon-wrap">
                 {feature.icon}
               </div>
@@ -979,28 +979,28 @@ function FeaturesPage() {
       {/* Extra capabilities */}
       <section className="section alt">
         <div className="container">
-          <p className="eyebrow" style={{ color: 'var(--accent)', textAlign: 'center' }}>More Capabilities</p>
-          <h2 style={{ textAlign: 'center', marginBottom: '3rem' }}>Everything Else You Need</h2>
+          <p className="eyebrow reveal" style={{ color: 'var(--accent)', textAlign: 'center' }}>More Capabilities</p>
+          <h2 className="reveal" style={{ textAlign: 'center', marginBottom: '3rem', '--delay': '0.05s' }}>Everything Else You Need</h2>
           <div className="features-extras-grid">
-            <div className="feature-extra-card">
+            <div className="feature-extra-card reveal" style={{ '--delay': '0.1s' }}>
               <div className="feature-extra-icon">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" y1="15" x2="12" y2="3" /></svg>
               </div>
               <h4>Export & Share</h4>
               <p>Export notes as PDF or text. Share transcriptions and summaries with classmates instantly.</p>
             </div>
-            <div className="feature-extra-card">
+            <div className="feature-extra-card reveal" style={{ '--delay': '0.15s' }}>
               <div className="feature-extra-icon">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
               </div>
               <h4>Missed Lecture Recovery</h4>
               <p>Absent? Get comprehensive catch-up summaries with key concepts and action points.</p>
             </div>
-            <div className="feature-extra-card">
+            <div className="feature-extra-card reveal" style={{ '--delay': '0.2s' }}>
               <div className="feature-extra-icon">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2" /><line x1="1" y1="10" x2="23" y2="10" /></svg>
               </div>
-              <h4>Wearable-First Design</h4>
+              <h4>Discreet, Lecture-Safe Wearable Design</h4>
               <p>Purpose-built for a wearable form factor — discreet, comfortable, and always ready for lectures.</p>
             </div>
           </div>
@@ -1010,13 +1010,13 @@ function FeaturesPage() {
       {/* Pricing Plan */}
       <section className="section pricing-section">
         <div className="container">
-          <p className="eyebrow" style={{ color: 'var(--accent)', textAlign: 'center' }}>Pricing Plan</p>
-          <h2 className="pricing-heading">Simple, Student-Friendly Pricing</h2>
-          <p className="pricing-subtitle">Start free. Upgrade when you need more power.</p>
+          <p className="eyebrow reveal" style={{ color: 'var(--accent)', textAlign: 'center' }}>Pricing Plan</p>
+          <h2 className="pricing-heading reveal" style={{ '--delay': '0.05s' }}>Simple, Student-Friendly Pricing</h2>
+          <p className="pricing-subtitle reveal" style={{ '--delay': '0.1s' }}>Start free. Upgrade when you need more power.</p>
 
           <div className="pricing-grid">
             {/* Free */}
-            <div className="pricing-card">
+            <div className="pricing-card reveal" style={{ '--delay': '0.15s' }}>
               <h3>Free</h3>
               <div className="pricing-price">
                 <span className="pricing-amount">$0</span>
@@ -1034,7 +1034,7 @@ function FeaturesPage() {
             </div>
 
             {/* Pro — highlighted */}
-            <div className="pricing-card featured">
+            <div className="pricing-card featured reveal" style={{ '--delay': '0.2s' }}>
               <span className="pricing-badge">Most Popular</span>
               <h3>Pro</h3>
               <div className="pricing-price">
@@ -1055,7 +1055,7 @@ function FeaturesPage() {
             </div>
 
             {/* University */}
-            <div className="pricing-card">
+            <div className="pricing-card reveal" style={{ '--delay': '0.25s' }}>
               <h3>University</h3>
               <div className="pricing-price">
                 <span className="pricing-amount">Custom</span>
@@ -1108,7 +1108,7 @@ function GetStartedPage() {
     >
       <section className="section">
         <div className="container contact-grid-centered">
-          <div className="contact-form-wrap">
+          <div className="contact-form-wrap reveal">
             <h2 className="contact-form-title">Secure your spot</h2>
             <p className="muted" style={{ marginBottom: '1.5rem' }}>
               Fill out the details below to join the early access programme.
@@ -1189,7 +1189,7 @@ function GetStartedPage() {
       {/* Early Access Benefits Section */}
       <section className="section benefits-section" style={{ borderTop: '1px solid var(--light-border)', background: 'var(--white)' }}>
         <div className="container">
-          <div className="benefits-header" style={{ textAlign: 'center', marginBottom: '4rem' }}>
+          <div className="benefits-header reveal" style={{ textAlign: 'center', marginBottom: '4rem' }}>
             <h2 style={{ fontSize: '2.4rem', marginBottom: '1rem' }}>Why join early access?</h2>
             <p className="lead" style={{ maxWidth: '600px', margin: '0 auto' }}>
               Early access members get exclusive perks and help shape the future of UniBand.
@@ -1197,7 +1197,7 @@ function GetStartedPage() {
           </div>
 
           <div className="early-benefits-grid">
-            <div className="benefit-card">
+            <div className="benefit-card reveal" style={{ '--delay': '0.1s' }}>
               <div className="benefit-icon" style={{ background: 'rgba(234, 179, 8, 0.1)', color: '#eab308' }}>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20.91 8.18L16.14 16.8a2 2 0 0 1-1.74 1h-8.8a2 2 0 0 1-1.74-1l-4.77-8.62a2 2 0 0 1 0-2l4.77-8.62a2 2 0 0 1 1.74-1h8.8a2 2 0 0 1 1.74 1l4.77 8.62a2 2 0 0 1 0 2z" /><path d="M12 22v-4" /><path d="M12 6V2" /></svg>
               </div>
@@ -1205,7 +1205,7 @@ function GetStartedPage() {
               <p>Exclusive for students. Sign up with your university email and get your first month of premium access completely free.</p>
             </div>
 
-            <div className="benefit-card">
+            <div className="benefit-card reveal" style={{ '--delay': '0.15s' }}>
               <div className="benefit-icon" style={{ background: 'rgba(59, 130, 246, 0.1)', color: 'var(--accent)' }}>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17" /><polyline points="16 7 22 7 22 13" /></svg>
               </div>
@@ -1213,7 +1213,7 @@ function GetStartedPage() {
               <p>Be among the very first to test our wearable hardware and AI software before the public release.</p>
             </div>
 
-            <div className="benefit-card">
+            <div className="benefit-card reveal" style={{ '--delay': '0.2s' }}>
               <div className="benefit-icon" style={{ background: 'rgba(16, 185, 129, 0.1)', color: '#10b981' }}>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2" /><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" /></svg>
               </div>
@@ -1221,7 +1221,7 @@ function GetStartedPage() {
               <p>Locked-in "Early Bird" pricing and significant discounts exclusively for our first 1,000 students.</p>
             </div>
 
-            <div className="benefit-card">
+            <div className="benefit-card reveal" style={{ '--delay': '0.25s' }}>
               <div className="benefit-icon" style={{ background: 'rgba(139, 92, 246, 0.1)', color: '#8b5cf6' }}>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 20h9" /><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" /></svg>
               </div>
@@ -1267,12 +1267,12 @@ function BlogPage() {
       {/* Featured post */}
       {activeTag === 'All' && (
         <section className="section blog-featured">
-          <div className="container blog-featured-inner">
+          <div className="container blog-featured-inner reveal">
             <div className="blog-featured-image">
               <span className="blog-featured-badge">Read the latest</span>
               <img src={featured.image} alt={featured.title} />
             </div>
-            <div className="blog-featured-content">
+            <div className="blog-featured-content reveal" style={{ '--delay': '0.1s' }}>
               <span className="pill">{featured.tag}</span>
               <h2>{featured.title}</h2>
               <p>{featured.excerpt}</p>
@@ -1291,8 +1291,8 @@ function BlogPage() {
       {/* Blog grid */}
       <section className="section">
         <div className="container blog-grid">
-          {filtered.map((post) => (
-            <article className="blog-card-v2" key={post.slug}>
+          {filtered.map((post, i) => (
+            <article className="blog-card-v2 reveal" key={post.slug} style={{ '--delay': `${i * 0.05}s` }}>
               <Link to={`/blog/${post.slug}`} className="blog-card-image-link">
                 <img src={post.image} alt={post.title} className="blog-card-img" />
               </Link>
@@ -1341,7 +1341,7 @@ function BlogPostPage() {
   return (
     <PageShell title={post.title} subtitle={`${post.date} · ${post.readTime}`}>
       <section className="section">
-        <div className="container">
+        <div className="container reveal">
           <p className="lead" style={{ color: 'var(--text-light-muted)' }}>{post.excerpt}</p>
           <p className="muted">
             This is a starter template for the blog article. We can expand it
@@ -1363,7 +1363,7 @@ function SimplePage({ title, body }) {
   return (
     <PageShell title={title}>
       <section className="section">
-        <div className="container">
+        <div className="container reveal">
           <p className="lead" style={{ color: 'var(--text-light-muted)' }}>{body}</p>
         </div>
       </section>
