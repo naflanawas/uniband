@@ -2496,6 +2496,24 @@ select:focus {
   flex-shrink: 0;
 }
 
+.pricing-features .cross {
+  color: #ef4444;
+  /* red-500 */
+  font-weight: 700;
+  font-size: 0.95rem;
+  flex-shrink: 0;
+}
+
+.pricing-feature-hardware {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  padding-bottom: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.pricing-card.featured .pricing-feature-hardware {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 .pricing-btn {
   width: 100%;
   justify-content: center;

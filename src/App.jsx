@@ -1014,6 +1014,11 @@ function FeaturesPage() {
           <h2 className="pricing-heading reveal" style={{ '--delay': '0.05s' }}>Simple, Student-Friendly Pricing</h2>
           <p className="pricing-subtitle reveal" style={{ '--delay': '0.1s' }}>Start free. Upgrade when you need more power.</p>
 
+          <div className="pricing-positioning reveal" style={{ '--delay': '0.12s', textAlign: 'center', maxWidth: '700px', margin: '0 auto 3rem auto', color: 'var(--text-light-muted)', lineHeight: '1.6' }}>
+            <p><strong>UniBand is built to be affordable for students while delivering premium AI-powered lecture recording and transcription.</strong></p>
+            <p style={{ fontSize: '0.9rem', marginTop: '0.5rem' }}><em>Note: The UniBand wearable hardware is a one-time purchase. Software subscription plans (below) unlock advanced AI features.</em></p>
+          </div>
+
           <div className="pricing-grid">
             {/* Free */}
             <div className="pricing-card reveal" style={{ '--delay': '0.15s' }}>
@@ -1022,13 +1027,14 @@ function FeaturesPage() {
                 <span className="pricing-amount">$0</span>
                 <span className="pricing-period">/month</span>
               </div>
-              <p className="pricing-tagline">Great for trying UniBand</p>
+              <p className="pricing-tagline">Great for trying the app</p>
               <ul className="pricing-features">
-                <li><span className="check">✓</span> 5 lecture recordings/month</li>
+                <li><span className="check">✓</span> 5 mobile app recordings/month</li>
                 <li><span className="check">✓</span> Basic transcription</li>
                 <li><span className="check">✓</span> Summary notes</li>
                 <li><span className="check">✓</span> 1 language</li>
                 <li><span className="check">✓</span> 7-day archive</li>
+                <li className="pricing-feature-hardware"><span className="cross">✗</span> Wearable band requires Pro</li>
               </ul>
               <Link className="btn ghost pricing-btn" to="/get-started">Get Started</Link>
             </div>
@@ -1041,8 +1047,9 @@ function FeaturesPage() {
                 <span className="pricing-amount">$4.99</span>
                 <span className="pricing-period">/month</span>
               </div>
-              <p className="pricing-tagline">Best for active students</p>
+              <p className="pricing-tagline">Unlock full AI & hardware support</p>
               <ul className="pricing-features">
+                <li className="pricing-feature-hardware"><span className="check">✓</span> <strong>Syncs with UniBand Wearable</strong></li>
                 <li><span className="check">✓</span> Unlimited recordings</li>
                 <li><span className="check">✓</span> Advanced AI transcription</li>
                 <li><span className="check">✓</span> Smart summaries & revision</li>
@@ -1062,6 +1069,7 @@ function FeaturesPage() {
               </div>
               <p className="pricing-tagline">For institutions & departments</p>
               <ul className="pricing-features">
+                <li><span className="check">✓</span> Hardware bundles available</li>
                 <li><span className="check">✓</span> Everything in Pro</li>
                 <li><span className="check">✓</span> Bulk student licences</li>
                 <li><span className="check">✓</span> Admin dashboard</li>
