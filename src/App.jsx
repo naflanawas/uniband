@@ -251,6 +251,10 @@ function PageShell({ title, subtitle, children }) {
 function HomePage() {
   return (
     <main className="home">
+      <Helmet>
+        <title>UniBand - AI-Powered Lecture Recorder Wearable</title>
+        <meta name="description" content="Capture every word with the UniBand AI lecture recorder wearable. Get real-time transcriptions, smart summaries, and translated notes effortlessly." />
+      </Helmet>
       {/* ── 1. Motion Hero Section ── */}
       <section className="hero-section">
         {/* Ambient glow effects */}
