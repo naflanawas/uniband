@@ -10,65 +10,59 @@ import {
   useLocation,
 } from 'react-router-dom'
 
-const posts = [
+const blogPosts = [
   {
-    slug: 'better-lecture-notes-without-burnout',
-    title: 'How to take better lecture notes without burning out',
-    excerpt:
-      'Practical note-taking tactics that keep you focused and reduce overload. Learn the proven methods used by top students to capture key ideas efficiently.',
+    slug: 'record-university-lectures-guide',
+    title: 'Best Ways to Record University Lectures in 2026: A Complete Guide',
+    excerpt: 'Stop missing important points. Compare audio recorders, transcriber apps, and the latest AI wearable devices designed specifically for university students.',
     date: 'Feb 9, 2026',
     readTime: '4 min read',
-    tag: 'Study',
+    tag: 'Technology',
     image: '/images/noteTaking.png',
   },
   {
-    slug: 'learning-in-a-second-language',
-    title: 'Learning in a second language: strategies that actually work',
-    excerpt:
-      'Simple techniques to improve comprehension in English-medium classes. From bilingual note-taking to active listening tips.',
+    slug: 'study-english-second-language',
+    title: 'How to Study Effectively When English Isn\'t Your First Language',
+    excerpt: 'Struggling to keep up with fast-paced English-medium lectures? Discover translation tools, auto-summarizers, and active learning strategies to boost your grades.',
     date: 'Feb 9, 2026',
     readTime: '5 min read',
     tag: 'Language',
     image: '/images/card1.png',
   },
   {
-    slug: 'revise-faster-with-summaries',
-    title: 'How to revise faster using summaries and active recall',
-    excerpt:
-      'Turn long lectures into quick review sessions with focused summaries and spaced repetition techniques.',
+    slug: 'note-taking-long-lectures',
+    title: 'The Ultimate Guide to Note-Taking for 3-Hour University Lectures',
+    excerpt: 'Writing everything down doesn\'t work. Learn how top students use the Feynman technique, Cornell notes, and AI transcription to master long lecture halls.',
     date: 'Feb 9, 2026',
     readTime: '4 min read',
-    tag: 'Revision',
+    tag: 'Study',
     image: '/images/card2.png',
   },
   {
-    slug: 'wearable-tech-in-education',
-    title: 'How wearable technology is transforming education',
-    excerpt:
-      'From smartwatches to smart bands — discover how wearable devices are creating new learning experiences in universities worldwide.',
+    slug: 'ai-study-tools-transform-semester',
+    title: '5 AI Study Tools That Will Transform Your Semester (and GPA)',
+    excerpt: 'From smart flashcards to wearable lecture recorders like UniBand, these breakthrough AI technologies are changing how university students prepare for exams.',
     date: 'Jan 28, 2026',
     readTime: '6 min read',
     tag: 'Technology',
     image: '/images/card3.png',
   },
   {
-    slug: 'ai-powered-study-tools',
-    title: '5 AI-powered study tools every student should know about',
-    excerpt:
-      'Artificial intelligence is changing how students study. These five tools can help you learn smarter, not harder.',
+    slug: 'missed-lecture-catch-up',
+    title: 'What to Do When You Miss a Lecture: A Foolproof Catch-Up Strategy',
+    excerpt: 'Missed a crucial class? Don\'t panic. Learn how to leverage shared lecture notes, AI summarization, and classmate recordings to get back on track instantly.',
     date: 'Jan 20, 2026',
     readTime: '5 min read',
-    tag: 'Technology',
+    tag: 'Study',
     image: '/images/card4.png',
   },
   {
-    slug: 'managing-exam-stress',
-    title: 'A student\'s guide to managing exam stress effectively',
-    excerpt:
-      'Exam season doesn\'t have to be overwhelming. Learn science-backed strategies to stay calm and perform at your best.',
+    slug: 'lecture-revision-strategy',
+    title: 'How to Turn Raw Lecture Transcripts into High-Yield Revision Sheets',
+    excerpt: 'Don\'t just re-read your notes. Discover the fastest workflow for converting hours of lecture audio into digestible, exam-ready summaries and flashcards.',
     date: 'Jan 15, 2026',
     readTime: '4 min read',
-    tag: 'Wellness',
+    tag: 'Revision',
     image: '/images/card5.png',
   },
 ]
@@ -1261,9 +1255,9 @@ function GetStartedPage() {
 
 function BlogPage() {
   const [activeTag, setActiveTag] = useState('All')
-  const tags = ['All', ...new Set(posts.map((p) => p.tag))]
-  const featured = posts[0]
-  const filtered = activeTag === 'All' ? posts.slice(1) : posts.filter((p) => p.tag === activeTag && p.slug !== featured.slug)
+  const tags = ['All', ...new Set(blogPosts.map((p) => p.tag))]
+  const featured = blogPosts[0]
+  const filtered = activeTag === 'All' ? blogPosts.slice(1) : blogPosts.filter((p) => p.tag === activeTag && p.slug !== featured.slug)
 
   return (
     <PageShell
@@ -1421,7 +1415,6 @@ function AppRoutes() {
   const isHome = location.pathname === '/'
 
   useEffect(() => {
-    const elements = document.querySelectorAll('.reveal')
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -1434,8 +1427,22 @@ function AppRoutes() {
       { threshold: 0.15 }
     )
 
-    elements.forEach((el) => observer.observe(el))
-    return () => observer.disconnect()
+    const observeNewElements = () => {
+      document.querySelectorAll('.reveal:not(.is-visible)').forEach((el) => observer.observe(el))
+    }
+
+    observeNewElements()
+
+    const mutationObserver = new MutationObserver(() => {
+      observeNewElements()
+    })
+
+    mutationObserver.observe(document.body, { childList: true, subtree: true })
+
+    return () => {
+      observer.disconnect()
+      mutationObserver.disconnect()
+    }
   }, [location.pathname])
 
   return (

@@ -1986,6 +1986,8 @@ select:focus {
 
 .pill {
   display: inline-flex;
+  align-self: flex-start;
+  width: max-content;
   padding: 0.25rem 0.8rem;
   border-radius: 999px;
   background: rgba(59, 130, 246, 0.1);
