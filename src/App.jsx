@@ -510,14 +510,14 @@ function HomePage() {
       <section className="image-row-section">
         <div className="container image-row">
           <div className="image-card reveal">
-            <img src="/images/unnamed-5.jpg" alt="UniBand product variants" />
+            <img src="/images/modelBand.png" alt="UniBand product variants" />
             <div className="image-card-body">
               <h3>Designed for daily campus use</h3>
               <p>Durable, lightweight, and comfortable for long lectures.</p>
             </div>
           </div>
           <div className="image-card reveal" style={{ '--delay': '0.1s' }}>
-            <img src="/images/unnamed.jpg" alt="UniBand close-up detail" />
+            <img src="/images/mbDesign.png" alt="UniBand close-up detail" />
             <div className="image-card-body">
               <h3>Premium build quality</h3>
               <p>Brushed metal clasp with woven textile strap — built to last.</p>
@@ -531,7 +531,7 @@ function HomePage() {
         <div className="container showcase-grid reverse">
           <div className="showcase-image reveal">
             <img
-              src="/images/unnamed-8.jpg"
+              src="/images/mb.png"
               alt="UniBand AI lecture recorder wearable in minimal lighting"
             />
           </div>
@@ -794,7 +794,7 @@ function AboutPage() {
       <section className="section alt">
         <div className="container about-story-grid">
           <div className="about-story-image reveal">
-            <img src="/images/unnamed-9.jpg" alt="The UniBand story - AI lecture recorder wearable device" />
+            <img src="/images/aboutUs.png" alt="The UniBand story - AI lecture recorder wearable device" />
             <div className="about-story-quote-card">
               <p>"Making learning accessible, one lecture at a time"</p>
               <span>UniBand Team</span>
