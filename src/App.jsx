@@ -12,6 +12,16 @@ import {
 
 const blogPosts = [
   {
+    slug: 'why-were-building-uniband',
+    title: 'Why We’re Building UniBand: A Wearable AI Study Assistant Concept',
+    excerpt: 'We believe university students need a better way to capture and understand lectures. Here is the story behind UniBand and why we are building the ultimate AI study wearable.',
+    date: 'Mar 2, 2026',
+    readTime: '4–5 min read',
+    tag: 'Technology',
+    image: '/images/uniBlog.png',
+    mediumUrl: 'https://medium.com/@naflanawas/do-university-students-need-a-smarter-way-to-record-lectures-586076f85cd7'
+  },
+  {
     slug: 'record-university-lectures-guide',
     title: 'Best Ways to Record University Lectures in 2026: A Complete Guide',
     excerpt: 'Stop missing important points. Compare audio recorders, transcriber apps, and the latest AI wearable devices designed specifically for university students.',
@@ -41,6 +51,7 @@ const blogPosts = [
   {
     slug: 'ai-study-tools-transform-semester',
     title: '5 AI Study Tools That Will Transform Your Semester (and GPA)',
+    url: 'https://gozuperly.medium.com/five-productivity-tools-for-college-students-d31c684c8d2',
     excerpt: 'From smart flashcards to wearable lecture recorders like UniBand, these breakthrough AI technologies are changing how university students prepare for exams.',
     date: 'Jan 28, 2026',
     readTime: '6 min read',
@@ -59,6 +70,7 @@ const blogPosts = [
   {
     slug: 'lecture-revision-strategy',
     title: 'How to Turn Raw Lecture Transcripts into High-Yield Revision Sheets',
+    url: 'https://medium.com/@NeverCap/transcribe-lectures-into-study-notes-for-university-students-the-ultimate-guide-to-ai-powered-bb92075d776e',
     excerpt: 'Don\'t just re-read your notes. Discover the fastest workflow for converting hours of lecture audio into digestible, exam-ready summaries and flashcards.',
     date: 'Jan 15, 2026',
     readTime: '4 min read',
@@ -1298,9 +1310,15 @@ function BlogPage() {
                 <span>{featured.date}</span>
                 <span>{featured.readTime}</span>
               </div>
-              <Link className="btn ghost-dark blog-read-btn" to={`/blog/${featured.slug}`}>
-                Read Post
-              </Link>
+              {featured.url ? (
+                <a className="btn ghost-dark blog-read-btn" href={featured.url} target="_blank" rel="noopener noreferrer">
+                  Read Post
+                </a>
+              ) : (
+                <Link className="btn ghost-dark blog-read-btn" to={`/blog/${featured.slug}`}>
+                  Read Post
+                </Link>
+              )}
             </div>
           </div>
         </section>
@@ -1311,21 +1329,37 @@ function BlogPage() {
         <div className="container blog-grid">
           {filtered.map((post, i) => (
             <article className="blog-card-v2 reveal" key={post.slug} style={{ '--delay': `${i * 0.05}s` }}>
-              <Link to={`/blog/${post.slug}`} className="blog-card-image-link">
-                <img src={post.image} alt={`${post.title} - UniBand AI lecture recorder`} className="blog-card-img" />
-              </Link>
+              {post.url ? (
+                <a href={post.url} target="_blank" rel="noopener noreferrer" className="blog-card-image-link">
+                  <img src={post.image} alt={`${post.title} - UniBand AI lecture recorder`} className="blog-card-img" />
+                </a>
+              ) : (
+                <Link to={`/blog/${post.slug}`} className="blog-card-image-link">
+                  <img src={post.image} alt={`${post.title} - UniBand AI lecture recorder`} className="blog-card-img" />
+                </Link>
+              )}
               <div className="blog-card-body">
                 <div className="blog-card-meta-row">
                   <span className="pill">{post.tag}</span>
                   <span className="blog-card-date">{post.date}</span>
                 </div>
                 <h3>
-                  <Link to={`/blog/${post.slug}`}>{post.title}</Link>
+                  {post.url ? (
+                    <a href={post.url} target="_blank" rel="noopener noreferrer">{post.title}</a>
+                  ) : (
+                    <Link to={`/blog/${post.slug}`}>{post.title}</Link>
+                  )}
                 </h3>
                 <p>{post.excerpt}</p>
-                <Link className="text-link blog-read-more" to={`/blog/${post.slug}`}>
-                  Read More &nbsp;→
-                </Link>
+                {post.url ? (
+                  <a className="text-link blog-read-more" href={post.url} target="_blank" rel="noopener noreferrer">
+                    Read More &nbsp;→
+                  </a>
+                ) : (
+                  <Link className="text-link blog-read-more" to={`/blog/${post.slug}`}>
+                    Read More &nbsp;→
+                  </Link>
+                )}
               </div>
             </article>
           ))}
@@ -1364,12 +1398,39 @@ function BlogPostPage() {
       </Helmet>
       <section className="section">
         <div className="container reveal">
-          <p className="lead" style={{ color: 'var(--text-light-muted)' }}>{post.excerpt}</p>
-          <p className="muted">
-            This is a starter template for the blog article. We can expand it
-            with full content and images next.
-          </p>
-          <div className="card subtle cta-inline" style={{ marginTop: '2rem' }}>
+          {post.slug === 'why-were-building-uniband' ? (
+            <>
+              <p className="lead" style={{ color: 'var(--text-light-muted)' }}>
+                We all know the struggle: trying to listen to the professor while frantically scribbling down notes. You end up missing key points, staring at incomplete sentences later that night, and feeling overwhelmed when exam season approaches.
+              </p>
+              <p className="muted" style={{ marginTop: '1.5rem', lineHeight: '1.7' }}>
+                That’s exactly why we started designing UniBand. We envisioned a discreet, wearable device that effortlessly captures the audio of your lecture, transcribes it in real time, and uses AI to generate smart, structured summaries directly to your phone.
+              </p>
+              <p className="muted" style={{ marginTop: '1.5rem', lineHeight: '1.7' }}>
+                Our goal is to eliminate divided attention in the lecture hall. No more missing vital details. Just a seamless bridge between listening and learning.
+              </p>
+              <div style={{ marginTop: '2.5rem' }}>
+                <a
+                  href={post.mediumUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn ghost-dark"
+                >
+                  Read the full article on Medium &nbsp;→
+                </a>
+              </div>
+            </>
+          ) : (
+            <>
+              <p className="lead" style={{ color: 'var(--text-light-muted)' }}>{post.excerpt}</p>
+              <p className="muted" style={{ marginTop: '1rem' }}>
+                This is a starter template for the blog article. We can expand it
+                with full content and images next.
+              </p>
+            </>
+          )}
+
+          <div className="card subtle cta-inline" style={{ marginTop: '4rem' }}>
             <h3>Want UniBand to do this automatically?</h3>
             <Link className="btn primary" to="/get-started" style={{ marginTop: '1rem' }}>
               Join early access
