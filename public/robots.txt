@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://uniband.vercel.app/sitemap.xml

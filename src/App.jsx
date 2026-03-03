@@ -1120,13 +1120,6 @@ function FeaturesPage() {
 }
 
 function GetStartedPage() {
-  const [showSuccess, setShowSuccess] = useState(false)
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setShowSuccess(true);
-  }
-
   return (
     <PageShell
       title="Join UniBand Early Access"
@@ -1138,83 +1131,24 @@ function GetStartedPage() {
       </Helmet>
       <section className="section">
         <div className="container contact-grid-centered">
-          <div className="contact-form-wrap reveal">
-            <h2 className="contact-form-title">Secure your spot</h2>
-            <p className="muted" style={{ marginBottom: '1.5rem' }}>
-              Fill out the details below to join the early access programme.
+          <div className="contact-form-wrap reveal" style={{ textAlign: 'center', padding: '4rem 2rem' }}>
+            <h2 className="contact-form-title" style={{ marginBottom: '1rem' }}>Secure your spot</h2>
+            <p className="muted" style={{ fontSize: '1.1rem', maxWidth: '500px', margin: '0 auto 2.5rem', lineHeight: '1.6' }}>
+              We're currently accepting priority applications for our Early Access programme. Please complete our official application form to secure your student discount and first month free.
             </p>
-            <form className="contact-form" onSubmit={handleSubmit}>
-              <div className="form-row">
-                <label>
-                  Full name
-                  <input type="text" placeholder="Your full name" />
-                </label>
-                <label>
-                  University Email
-                  <input type="email" placeholder="you@university.edu" />
-                </label>
-              </div>
-              <div className="form-row">
-                <label>
-                  University / Institute
-                  <input type="text" placeholder="e.g. University of Moratuwa" />
-                </label>
-                <label>
-                  Field of Study
-                  <input type="text" placeholder="e.g. Computer Science" />
-                </label>
-              </div>
-              <div className="form-row">
-                <label>
-                  Year of Study
-                  <select defaultValue="">
-                    <option value="" disabled>Select your year</option>
-                    <option>Freshman (1st Year)</option>
-                    <option>Sophomore (2nd Year)</option>
-                    <option>Junior (3rd Year)</option>
-                    <option>Senior (4th Year)</option>
-                    <option>Postgraduate</option>
-                  </select>
-                </label>
-                <label>
-                  Preferred Language
-                  <select defaultValue="English">
-                    <option>English</option>
-                    <option>Sinhala</option>
-                    <option>Tamil</option>
-                    <option>Other</option>
-                  </select>
-                </label>
-              </div>
-
-              <label className="checkbox" style={{ marginTop: '1rem' }}>
-                <input type="checkbox" defaultChecked />
-                I agree to be notified about priority beta access
-              </label>
-              <button className="btn primary" type="submit" style={{ width: '100%', marginTop: '1.5rem' }}>
-                Join Early Access
-              </button>
-            </form>
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSeM9TOWX6V3I0giYP2SI26P7Fpx3rf7sBWd1LflAM-AEsZCRA/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn primary"
+              style={{ padding: '1rem 2rem', fontSize: '1.1rem' }}
+            >
+              Complete Application Form &nbsp;→
+            </a>
           </div>
 
         </div>
       </section>
-
-      {/* Success Popup Overlay */}
-      {showSuccess && (
-        <div className="popup-overlay" onClick={() => setShowSuccess(false)}>
-          <div className="popup-content" onClick={(e) => e.stopPropagation()}>
-            <div className="popup-icon">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-            </div>
-            <h2>Congratulations!</h2>
-            <p>We have received your application. Your 1-month free trial has been activated!</p>
-            <button className="btn primary" onClick={() => setShowSuccess(false)} style={{ width: '100%', marginTop: '1.5rem' }}>
-              Awesome, thanks!
-            </button>
-          </div>
-        </div>
-      )}
 
       {/* Early Access Benefits Section */}
       <section className="section benefits-section" style={{ borderTop: '1px solid var(--light-border)', background: 'var(--white)' }}>
