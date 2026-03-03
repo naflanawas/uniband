@@ -1122,20 +1122,25 @@ function FeaturesPage() {
 function GetStartedPage() {
   return (
     <PageShell
-      title="Join UniBand Early Access"
-      subtitle="Be the first to experience the future of academic learning. Secure your spot on our priority list today."
+      title="Apply for UniBand Beta Program"
+      subtitle="Be among the first students to test UniBand’s smart wearable and AI-powered app before public release."
     >
       <Helmet>
-        <title>Get Started - Join UniBand Early Access</title>
-        <meta name="description" content="Sign up for UniBand Early Access to get priority beta access, student discounts, and your first month free." />
+        <title>Get Started - Apply for UniBand Beta Program</title>
+        <meta name="description" content="Apply for the UniBand Beta Program to test our smart wearable and AI-powered app before public release." />
       </Helmet>
       <section className="section">
         <div className="container contact-grid-centered">
           <div className="contact-form-wrap reveal" style={{ textAlign: 'center', padding: '4rem 2rem' }}>
             <h2 className="contact-form-title" style={{ marginBottom: '1rem' }}>Secure your spot</h2>
-            <p className="muted" style={{ fontSize: '1.1rem', maxWidth: '500px', margin: '0 auto 2.5rem', lineHeight: '1.6' }}>
-              We're currently accepting priority applications for our Early Access programme. Please complete our official application form to secure your student discount and first month free.
-            </p>
+            <div className="muted" style={{ fontSize: '1.1rem', maxWidth: '500px', margin: '0 auto 2.5rem', lineHeight: '1.6', textAlign: 'left' }}>
+              We're accepting a limited number of beta applicants. Selected students may receive:
+              <ul style={{ marginTop: '1rem', listStyle: 'none', padding: 0 }}>
+                <li style={{ marginBottom: '0.5rem' }}>• Early access to the UniBand wearable</li>
+                <li style={{ marginBottom: '0.5rem' }}>• 6 months of Pro access</li>
+                <li>• Priority feature updates</li>
+              </ul>
+            </div>
             <a
               href="https://docs.google.com/forms/d/e/1FAIpQLSeM9TOWX6V3I0giYP2SI26P7Fpx3rf7sBWd1LflAM-AEsZCRA/viewform"
               target="_blank"
@@ -1143,7 +1148,7 @@ function GetStartedPage() {
               className="btn primary"
               style={{ padding: '1rem 2rem', fontSize: '1.1rem' }}
             >
-              Complete Application Form &nbsp;→
+              Apply for Beta Access &nbsp;→
             </a>
           </div>
 
@@ -1165,8 +1170,8 @@ function GetStartedPage() {
               <div className="benefit-icon" style={{ background: 'rgba(234, 179, 8, 0.1)', color: '#eab308' }}>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20.91 8.18L16.14 16.8a2 2 0 0 1-1.74 1h-8.8a2 2 0 0 1-1.74-1l-4.77-8.62a2 2 0 0 1 0-2l4.77-8.62a2 2 0 0 1 1.74-1h8.8a2 2 0 0 1 1.74 1l4.77 8.62a2 2 0 0 1 0 2z" /><path d="M12 22v-4" /><path d="M12 6V2" /></svg>
               </div>
-              <h3>1st Month Free</h3>
-              <p>Exclusive for students. Sign up with your university email and get your first month of premium access completely free.</p>
+              <h3>6 Months Pro Access</h3>
+              <p>Exclusive for students. Sign up with your university email and get 6 months of premium access completely free.</p>
             </div>
 
             <div className="benefit-card reveal" style={{ '--delay': '0.15s' }}>
@@ -1181,7 +1186,7 @@ function GetStartedPage() {
               <div className="benefit-icon" style={{ background: 'rgba(16, 185, 129, 0.1)', color: '#10b981' }}>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2" /><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" /></svg>
               </div>
-              <h3>Student Discounts</h3>
+              <h3>Founding Member Pricing</h3>
               <p>Locked-in "Early Bird" pricing and significant discounts exclusively for our first 1,000 students.</p>
             </div>
 
