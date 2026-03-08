@@ -332,16 +332,13 @@
   -webkit-backdrop-filter: blur(16px);
   max-width: 260px;
   transition: all 0.4s ease;
-  animation: heroFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  animation-delay: var(--anim-delay, 0s);
   opacity: 0;
-  transform: translateY(40px);
 }
 
 .hero-floating-card:hover {
   background: rgba(255, 255, 255, 0.08);
   border-color: rgba(59, 130, 246, 0.25);
-  transform: translateY(-4px);
+  transform: translateY(-4px) scale(1.02);
 }
 
 .floating-card-icon {
@@ -374,45 +371,94 @@
 .float-tl {
   top: 15%;
   left: 4%;
+  animation: heroFadeTL 1s cubic-bezier(0.16, 1, 0.3, 1) forwards var(--anim-delay, 0s),
+    floatA 8s ease-in-out 1.2s infinite;
 }
 
 .float-tr {
   top: 15%;
   right: 4%;
+  animation: heroFadeTR 1s cubic-bezier(0.16, 1, 0.3, 1) forwards var(--anim-delay, 0s),
+    floatB 8s ease-in-out 1.2s infinite;
 }
 
 .float-bl {
   bottom: 18%;
   left: 4%;
+  animation: heroFadeBL 1s cubic-bezier(0.16, 1, 0.3, 1) forwards var(--anim-delay, 0s),
+    floatB 8s ease-in-out 1.2s infinite;
 }
 
 .float-br {
   bottom: 18%;
   right: 4%;
+  animation: heroFadeBR 1s cubic-bezier(0.16, 1, 0.3, 1) forwards var(--anim-delay, 0s),
+    floatA 8s ease-in-out 1.2s infinite;
 }
 
-/* Gentle floating animation after entrance */
-.hero-floating-card.float-tl,
-.hero-floating-card.float-br {
-  animation: heroFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards,
-    floatA 6s ease-in-out 2s infinite;
+/* Corner entrance animations */
+@keyframes heroFadeTL {
+  from {
+    opacity: 0;
+    transform: translate(-40px, -40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
 }
 
-.hero-floating-card.float-tr,
-.hero-floating-card.float-bl {
-  animation: heroFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards,
-    floatB 6s ease-in-out 2s infinite;
+@keyframes heroFadeTR {
+  from {
+    opacity: 0;
+    transform: translate(40px, -40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
 }
 
+@keyframes heroFadeBL {
+  from {
+    opacity: 0;
+    transform: translate(-40px, 40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes heroFadeBR {
+  from {
+    opacity: 0;
+    transform: translate(40px, 40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+/* Organic floating animation after entrance */
 @keyframes floatA {
 
   0%,
   100% {
-    transform: translateY(0);
+    transform: translate(0, 0) rotate(0deg);
   }
 
-  50% {
-    transform: translateY(-10px);
+  33% {
+    transform: translate(4px, -12px) rotate(1deg);
+  }
+
+  66% {
+    transform: translate(-4px, 6px) rotate(-1deg);
   }
 }
 
@@ -420,11 +466,15 @@
 
   0%,
   100% {
-    transform: translateY(0);
+    transform: translate(0, 0) rotate(0deg);
   }
 
-  50% {
-    transform: translateY(10px);
+  33% {
+    transform: translate(-6px, 12px) rotate(-1deg);
+  }
+
+  66% {
+    transform: translate(6px, -6px) rotate(1deg);
   }
 }
 

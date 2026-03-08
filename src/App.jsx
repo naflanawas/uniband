@@ -125,13 +125,13 @@ function Navbar({ variant = 'dark' }) {
             to="/get-started"
             onClick={() => setMenuOpen(false)}
           >
-            Join Early Access
+            Join Beta Program
           </Link>
         </nav>
 
         {/* Desktop CTA (visible only on larger screens) */}
         <Link className="btn primary desktop-cta" to="/get-started">
-          Join Early Access
+          Join Beta Program
         </Link>
       </div>
     </header>
@@ -311,9 +311,7 @@ function HomePage() {
 
         {/* Center content with staggered animations */}
         <div className="hero-content">
-          <span className="hero-eyebrow hero-anim" style={{ '--anim-delay': '0.1s' }}>
-            MVP • Smart Wearable • Lecture Companion →
-          </span>
+
           <h1 className="hero-title hero-anim" style={{ '--anim-delay': '0.2s' }}>
             AI Lecture Recorder
             <br />
@@ -321,15 +319,13 @@ function HomePage() {
             <br />
             <span className="accent-word">Companion.</span>
           </h1>
-          <p className="hero-subtitle hero-anim" style={{ '--anim-delay': '0.4s' }}>
-            UniBand combines a lightweight wearable recorder with an AI-powered
-            mobile app that transcribes, translates and summarises your
-            university lectures automatically.
+          <p className="hero-subtitle hero-anim" style={{ '--anim-delay': '0.4s', marginBottom: '1rem' }}>
+            UniBand combines a lightweight smart wearable with an AI-powered mobile app that records, transcribes, translates and summarises your university lectures automatically.
           </p>
+          <div className="muted hero-anim" style={{ '--anim-delay': '0.45s', marginBottom: '2.5rem', fontSize: '0.95rem', background: 'rgba(255,255,255,0.05)', padding: '0.5rem 1rem', borderRadius: 'var(--radius)', display: 'inline-block' }}>
+            <span style={{ marginRight: '0.5rem' }}></span> Limited Beta: Selected students receive early hardware access and 6 months of Pro features.
+          </div>
           <div className="hero-actions hero-anim" style={{ '--anim-delay': '0.5s' }}>
-            <Link className="btn primary" to="/get-started">
-              Get Early Access
-            </Link>
             <Link className="btn ghost" to="/about">
               How It Works
             </Link>
@@ -412,7 +408,7 @@ function HomePage() {
               playsInline
               className="mission-video"
             >
-              <source src="/images/uni_hero.mp4" type="video/mp4" />
+              <source src="/images/Storyboard 3.mp4" type="video/mp4" />
             </video>
             <div className="video-overlay-glow" />
           </div>
@@ -505,6 +501,7 @@ function HomePage() {
           </div>
         </div>
       </section>
+
 
       {/* ── 8. Image row (dark) ── */}
       <section className="image-row-section">
