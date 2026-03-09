@@ -256,6 +256,8 @@ function PageShell({ title, subtitle, children }) {
    ═══════════════════════════════════════════════════ */
 
 function HomePage() {
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+
   return (
     <main className="home">
       <Helmet>
@@ -323,7 +325,7 @@ function HomePage() {
             UniBand combines a lightweight smart wearable with an AI-powered mobile app that records, transcribes, translates and summarises your university lectures automatically.
           </p>
           <div className="muted hero-anim" style={{ '--anim-delay': '0.45s', marginBottom: '2.5rem', fontSize: '0.95rem', background: 'rgba(255,255,255,0.05)', padding: '0.5rem 1rem', borderRadius: 'var(--radius)', display: 'inline-block' }}>
-            <span style={{ marginRight: '0.5rem' }}></span> Limited Beta: Selected students receive early hardware access and 6 months of Pro features.
+            <span style={{ marginRight: '0.5rem' }}>🎁</span> Limited Beta: Selected students receive early hardware access and 6 months of Pro features.
           </div>
           <div className="hero-actions hero-anim" style={{ '--anim-delay': '0.5s' }}>
             <Link className="btn ghost" to="/about">
@@ -400,16 +402,35 @@ function HomePage() {
             </p>
           </div>
 
-          <div className="mission-video-container reveal" style={{ '--delay': '0.1s' }}>
-            <video
-              autoPlay
-              muted
-              loop
-              playsInline
-              className="mission-video"
-            >
-              <source src="/images/Storyboard 3.mp4" type="video/mp4" />
-            </video>
+          <div
+            className="mission-video-container reveal"
+            style={{ '--delay': '0.1s' }}
+            onClick={() => setIsVideoPlaying(true)}
+          >
+            {!isVideoPlaying ? (
+              <>
+                <img
+                  src="https://img.youtube.com/vi/Y91Bf2lBcM8/maxresdefault.jpg"
+                  alt="UniBand Solution Video Thumbnail"
+                  className="video-thumbnail"
+                />
+                <div className="play-button-overlay">
+                  <div className="play-button">
+                    <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
+                  </div>
+                </div>
+              </>
+            ) : (
+              <iframe
+                className="mission-video"
+                src="https://www.youtube.com/embed/Y91Bf2lBcM8?autoplay=1&controls=1&showinfo=0&rel=0&modestbranding=1"
+                title="UniBand YouTube Video"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              ></iframe>
+            )}
             <div className="video-overlay-glow" />
           </div>
 
