@@ -125,13 +125,13 @@ function Navbar({ variant = 'dark' }) {
             to="/get-started"
             onClick={() => setMenuOpen(false)}
           >
-            Join Beta Program
+            Join Early Access
           </Link>
         </nav>
 
         {/* Desktop CTA (visible only on larger screens) */}
         <Link className="btn primary desktop-cta" to="/get-started">
-          Join Beta Program
+          Join Early Access
         </Link>
       </div>
     </header>
@@ -315,17 +315,17 @@ function HomePage() {
         <div className="hero-content">
 
           <h1 className="hero-title hero-anim" style={{ '--anim-delay': '0.2s' }}>
-            AI Lecture Recorder
+            AI Note Taking
             <br />
-            & Smart Study
+            for Smarter Lectures
             <br />
-            <span className="accent-word">Companion.</span>
+            & <span className="accent-word">Faster Revision.</span>
           </h1>
           <p className="hero-subtitle hero-anim" style={{ '--anim-delay': '0.4s', marginBottom: '1rem' }}>
-            UniBand combines a lightweight smart wearable with an AI-powered mobile app that records, transcribes, translates and summarises your university lectures automatically.
+            UniBand is an AI note taking and lecture transcription tool designed for university students. Record lectures, generate clear summaries, and turn class content into searchable study material for faster revision.
           </p>
           <div className="muted hero-anim" style={{ '--anim-delay': '0.45s', marginBottom: '2.5rem', fontSize: '0.95rem', background: 'rgba(255,255,255,0.05)', padding: '0.5rem 1rem', borderRadius: 'var(--radius)', display: 'inline-block' }}>
-            <span style={{ marginRight: '0.5rem' }}>🎁</span> Limited Beta: Selected students receive early hardware access and 6 months of Pro features.
+            <span style={{ marginRight: '0.5rem' }}></span> Limited Beta: Selected students receive early hardware access and 6 months of Pro features.
           </div>
           <div className="hero-actions hero-anim" style={{ '--anim-delay': '0.5s' }}>
             <Link className="btn ghost" to="/about">
@@ -370,12 +370,10 @@ function HomePage() {
           <div className="problem-text reveal">
             <p className="eyebrow">The Problem</p>
             <h2 className="problem-heading">
-              Current note-taking is unsustainable.
+              Manual Note-Taking Slows Students Down.
             </h2>
             <p className="problem-desc">
-              Students juggle writing, listening, and understanding — all at
-              once. Fast-paced lectures, language barriers, and missed classes
-              leave gaps that are hard to fill. It's time for a smarter approach.
+              Traditional note-taking makes it difficult to capture every key point in fast-paced lectures. UniBand solves this with AI note taking, lecture transcription, and automatic lecture summaries that help students learn more efficiently.
             </p>
           </div>
           <div className="problem-image reveal" style={{ '--delay': '0.12s' }}>
@@ -392,13 +390,10 @@ function HomePage() {
           <div className="mission-content reveal">
             <p className="eyebrow" style={{ color: 'var(--accent)' }}>Our Solution</p>
             <h2 className="mission-heading">
-              Leading the way to a{' '}
-              <span className="accent-word">smarter</span> lecture future.
+              <span className="accent-word">AI Note Taking</span> Built for University Lectures.
             </h2>
             <p className="mission-desc">
-              UniBand captures every session through a lightweight wearable band,
-              then syncs with an AI-powered platform that generates structured
-              notes, summaries, and translated transcripts in your native language.
+              UniBand helps students record lectures, transcribe spoken content into text, and generate structured summaries for revision. This makes it easier to review lessons, find important ideas, and study more effectively.
             </p>
           </div>
 
@@ -436,7 +431,7 @@ function HomePage() {
 
           <div className="mission-actions reveal" style={{ '--delay': '0.2s' }}>
             <Link className="btn primary" to="/about">
-              Learn More About Us
+              Learn More
             </Link>
           </div>
         </div>
@@ -448,25 +443,25 @@ function HomePage() {
           <div className="features-header reveal">
             <p className="eyebrow">Features</p>
             <h2 className="features-heading">
-              A complete, smart lecture ecosystem.
+              AI Note Taking, Lecture Transcription and Smart Study Tools
             </h2>
           </div>
           <div className="features-grid">
             {[
               {
-                icon: (<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10" /><polygon points="10 8 16 12 10 16 10 8" /></svg>),
-                title: 'One-tap recording',
-                desc: 'Tap once and listen. Discreet, hands-free capture that works offline.',
+                icon: (<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10" /><path d="M12 16v-4" /><path d="M12 8h.01" /></svg>),
+                title: 'AI Lecture Transcription',
+                desc: 'Convert spoken lectures into structured text in real time, making it easier to review content and keep accurate lecture notes.',
               },
               {
                 icon: (<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /></svg>),
-                title: 'Smart notes & summaries',
-                desc: 'AI-generated bullet notes, key definitions, and quick-revision summaries.',
+                title: 'Automatic Lecture Summaries',
+                desc: 'Generate clear lecture summaries, topic highlights, and revision points from your recorded sessions.',
               },
               {
-                icon: (<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10" /><line x1="2" y1="12" x2="22" y2="12" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>),
-                title: 'Multi-language translation',
-                desc: 'Toggle between English and Sinhala with study-friendly formatting.',
+                icon: (<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" /></svg>),
+                title: 'Study Tools for Students',
+                desc: 'Search, organise, and revisit lecture content quickly using student-friendly AI study tools.',
               },
               {
                 icon: (<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" /></svg>),
@@ -936,22 +931,22 @@ function FeaturesPage() {
       icon: (
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10" /><polygon points="10 8 16 12 10 16 10 8" /></svg>
       ),
-      title: 'One-Tap Recording',
-      desc: 'Start recording lectures with a single tap — hands-free, discreet, and automatically organized by module and date.',
+      title: 'One-Tap Lecture Recording',
+      desc: 'Start recording lectures instantly with a single tap, creating organised session files ready for transcription and review.',
     },
     {
       icon: (
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /><polyline points="10 9 9 9 8 9" /></svg>
       ),
-      title: 'AI-Powered Real-Time Lecture Transcription',
-      desc: 'AI-powered speech-to-text converts your lectures into clean, structured transcriptions with highlighted key terms and definitions.',
+      title: 'AI-Powered Lecture Transcription',
+      desc: 'Convert lectures into searchable text with AI-powered transcription, making it easier to review key terms, definitions, and explanations.',
     },
     {
       icon: (
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
       ),
-      title: 'Automated Lecture Summaries & Revision Points',
-      desc: 'Get AI-generated bullet notes, topic sections, and quick revision summaries — perfect for exam prep and review sessions.',
+      title: 'Automatic Lecture Summaries and Revision Points',
+      desc: 'Generate lecture summaries, key topic sections, and revision points that help students prepare for exams more efficiently.',
     },
     {
       icon: (
@@ -964,22 +959,22 @@ function FeaturesPage() {
       icon: (
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" /></svg>
       ),
-      title: 'UniBand Assistant',
-      desc: 'Ask anything about your lecture — get simplified explanations, real-world examples, clarifications, and exam-relevant cues.',
+      title: 'Student Study Support Tools',
+      desc: 'Use built-in study support tools to review class content, clarify concepts, and prepare revision material from recorded lectures.',
     },
     {
       icon: (
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" /></svg>
       ),
-      title: 'Searchable Archive',
-      desc: 'Search your entire lecture history by keyword, topic, or module. Filter by week, date, or subject for instant access.',
+      title: 'Searchable Lecture Archive',
+      desc: 'Search your lecture history by keyword, topic, or module to quickly find important sections from previous classes.',
     },
   ]
 
   return (
     <PageShell
-      title="Features built for modern students"
-      subtitle="Everything you need to capture, understand, and ace your lectures."
+      title="Lecture Transcription and AI Summaries for Students"
+      subtitle="Everything you need to record lectures, transcribe spoken content into text, and generate summaries that make studying easier."
     >
       <Helmet>
         <title>Features - UniBand AI Lecture Transcription & Summaries</title>
@@ -990,9 +985,7 @@ function FeaturesPage() {
         <div className="container">
           <p className="eyebrow reveal" style={{ color: 'var(--accent)', textAlign: 'center' }}>Our Features</p>
           <h2 className="features-mission-heading reveal" style={{ '--delay': '0.1s' }}>
-            Our Mission Is To Make Your{' '}
-            <span className="features-highlight">Learning</span>{' '}
-            Better Through Technology
+            Turn Lectures into Searchable Notes and Summaries
           </h2>
         </div>
       </section>
@@ -1047,11 +1040,11 @@ function FeaturesPage() {
       <section className="section pricing-section">
         <div className="container">
           <p className="eyebrow reveal" style={{ color: 'var(--accent)', textAlign: 'center' }}>Pricing Plan</p>
-          <h2 className="pricing-heading reveal" style={{ '--delay': '0.05s' }}>Simple, Student-Friendly Pricing</h2>
+          <h2 className="pricing-heading reveal" style={{ '--delay': '0.05s' }}>Student-Friendly Pricing for AI Lecture Transcription</h2>
           <p className="pricing-subtitle reveal" style={{ '--delay': '0.1s' }}>Start free. Upgrade when you need more power.</p>
 
           <div className="pricing-positioning reveal" style={{ '--delay': '0.12s', textAlign: 'center', maxWidth: '700px', margin: '0 auto 3rem auto', color: 'var(--text-light-muted)', lineHeight: '1.6' }}>
-            <p><strong>UniBand is built to be affordable for students while delivering premium AI-powered lecture recording and transcription.</strong></p>
+            <p><strong>UniBand gives students affordable access to lecture recording, AI note taking, transcription, and summaries in one platform.</strong></p>
             <p style={{ fontSize: '0.9rem', marginTop: '0.5rem' }}><em>Note: The UniBand wearable hardware is a one-time purchase. Software subscription plans (below) unlock advanced AI features.</em></p>
           </div>
 
@@ -1123,36 +1116,36 @@ function FeaturesPage() {
       <section className="section cta">
         <div className="container cta-inner">
           <div>
-            <h2>Ready to experience UniBand?</h2>
+            <h2>Ready to Try Lecture Transcription and AI Note Taking?</h2>
             <p className="lead">
-              Join early access and get student discounts at launch.
+              Join early access and explore how UniBand helps students record, transcribe, and summarise lectures more effectively.
             </p>
           </div>
           <Link className="btn primary" to="/get-started">
             Join Early Access
           </Link>
         </div>
-      </section>
-    </PageShell>
+      </section >
+    </PageShell >
   )
 }
 
 function GetStartedPage() {
   return (
     <PageShell
-      title="Apply for UniBand Beta Program"
+      title="Apply for UniBand Early Access"
       subtitle="Be among the first students to test UniBand’s smart wearable and AI-powered app before public release."
     >
       <Helmet>
-        <title>Get Started - Apply for UniBand Beta Program</title>
-        <meta name="description" content="Apply for the UniBand Beta Program to test our smart wearable and AI-powered app before public release." />
+        <title>Get Started - Apply for UniBand Early Access</title>
+        <meta name="description" content="Apply for UniBand Early Access to test our smart wearable and AI-powered app before public release." />
       </Helmet>
       <section className="section">
         <div className="container contact-grid-centered">
           <div className="contact-form-wrap reveal" style={{ textAlign: 'center', padding: '4rem 2rem' }}>
             <h2 className="contact-form-title" style={{ marginBottom: '1rem' }}>Secure your spot</h2>
             <div className="muted" style={{ fontSize: '1.1rem', maxWidth: '500px', margin: '0 auto 2.5rem', lineHeight: '1.6', textAlign: 'left' }}>
-              We're accepting a limited number of beta applicants. Selected students may receive:
+              We're accepting a limited number of early access applicants. Selected students may receive:
               <ul style={{ marginTop: '1rem', listStyle: 'none', padding: 0 }}>
                 <li style={{ marginBottom: '0.5rem' }}>• Early access to the UniBand wearable</li>
                 <li style={{ marginBottom: '0.5rem' }}>• 6 months of Pro access</li>
@@ -1166,7 +1159,7 @@ function GetStartedPage() {
               className="btn primary"
               style={{ padding: '1rem 2rem', fontSize: '1.1rem' }}
             >
-              Apply for Beta Access &nbsp;→
+              Apply for Early Access &nbsp;→
             </a>
           </div>
 
@@ -1196,7 +1189,7 @@ function GetStartedPage() {
               <div className="benefit-icon" style={{ background: 'rgba(59, 130, 246, 0.1)', color: 'var(--accent)' }}>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17" /><polyline points="16 7 22 7 22 13" /></svg>
               </div>
-              <h3>Priority Beta Access</h3>
+              <h3>Priority Early Access</h3>
               <p>Be among the very first to test our wearable hardware and AI software before the public release.</p>
             </div>
 
