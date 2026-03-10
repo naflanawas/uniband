@@ -45,13 +45,13 @@ export default function Navbar() {
                         href="/get-started"
                         onClick={() => setMenuOpen(false)}
                     >
-                        Join Early Access
+                        Download App
                     </Link>
                 </nav>
 
                 {/* Desktop CTA (visible only on larger screens) */}
                 <Link className="btn primary desktop-cta" href="/get-started">
-                    Join Early Access
+                    Download App
                 </Link>
             </div>
         </header>

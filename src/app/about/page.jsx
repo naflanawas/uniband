@@ -152,7 +152,7 @@ export default function AboutPage() {
             </p>
           </div>
           <Link className="btn primary" href="/get-started">
-            Download App
+            Apply for Early Access
           </Link>
         </div>
       </section>

@@ -1,7 +1,7 @@
 
 export const metadata = {
-  title: 'Get Started - Apply for UniBand Early Access',
-  description: 'Apply for UniBand Early Access to test our smart wearable and AI-powered app before public release.',
+  title: 'Get Started - Join the Beta Program',
+  description: 'Apply to test our intelligent wearable and AI-powered application before the official public release.',
 }
 
 import Link from 'next/link'
@@ -10,19 +10,19 @@ import PageShell from '../../components/PageShell'
 export default function GetStartedPage() {
   return (
     <PageShell
-      title="Apply for UniBand Early Access"
-      subtitle="Be among the first students to test UniBand’s smart wearable and AI-powered app before public release."
+      title="Apply for Early Access"
+      subtitle="Be among the first to test our smart device and AI-powered application before the official release."
     >
-      
+
       <section className="section">
         <div className="container contact-grid-centered">
           <div className="contact-form-wrap reveal" style={{ textAlign: 'center', padding: '4rem 2rem' }}>
             <h2 className="contact-form-title" style={{ marginBottom: '1rem' }}>Secure your spot</h2>
             <div className="muted" style={{ fontSize: '1.1rem', maxWidth: '500px', margin: '0 auto 2.5rem', lineHeight: '1.6', textAlign: 'left' }}>
-              We're accepting a limited number of early access applicants. Selected students may receive:
+              We're accepting a limited number of early applicants. Selected participants receive:
               <ul style={{ marginTop: '1rem', listStyle: 'none', padding: 0 }}>
-                <li style={{ marginBottom: '0.5rem' }}>• Early access to the UniBand wearable</li>
-                <li style={{ marginBottom: '0.5rem' }}>• 6 months of Pro access</li>
+                <li style={{ marginBottom: '0.5rem' }}>• Priority shipment of the wearable device</li>
+                <li style={{ marginBottom: '0.5rem' }}>• 6 months of premium software features</li>
                 <li>• Priority feature updates</li>
               </ul>
             </div>
@@ -33,7 +33,7 @@ export default function GetStartedPage() {
               className="btn primary"
               style={{ padding: '1rem 2rem', fontSize: '1.1rem' }}
             >
-              Apply for Early Access &nbsp;→
+              Apply Now &nbsp;→
             </a>
           </div>
 
@@ -44,9 +44,9 @@ export default function GetStartedPage() {
       <section className="section benefits-section" style={{ borderTop: '1px solid var(--light-border)', background: 'var(--white)' }}>
         <div className="container">
           <div className="benefits-header reveal" style={{ textAlign: 'center', marginBottom: '4rem' }}>
-            <h2 style={{ fontSize: '2.4rem', marginBottom: '1rem' }}>Why join early access?</h2>
+            <h2 style={{ fontSize: '2.4rem', marginBottom: '1rem' }}>Why join early?</h2>
             <p className="lead" style={{ maxWidth: '600px', margin: '0 auto' }}>
-              Early access members get exclusive perks and help shape the future of UniBand.
+              Pioneer members get exclusive perks and help shape the future of our platform.
             </p>
           </div>
 
@@ -56,15 +56,15 @@ export default function GetStartedPage() {
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20.91 8.18L16.14 16.8a2 2 0 0 1-1.74 1h-8.8a2 2 0 0 1-1.74-1l-4.77-8.62a2 2 0 0 1 0-2l4.77-8.62a2 2 0 0 1 1.74-1h8.8a2 2 0 0 1 1.74 1l4.77 8.62a2 2 0 0 1 0 2z" /><path d="M12 22v-4" /><path d="M12 6V2" /></svg>
               </div>
               <h3>6 Months Pro Access</h3>
-              <p>Exclusive for students. Sign up with your university email and get 6 months of premium access completely free.</p>
+              <p>Exclusive for undergraduates. Sign up with your university email and get six months of advanced features completely free.</p>
             </div>
 
             <div className="benefit-card reveal" style={{ '--delay': '0.15s' }}>
               <div className="benefit-icon" style={{ background: 'rgba(59, 130, 246, 0.1)', color: 'var(--accent)' }}>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17" /><polyline points="16 7 22 7 22 13" /></svg>
               </div>
-              <h3>Priority Early Access</h3>
-              <p>Be among the very first to test our wearable hardware and AI software before the public release.</p>
+              <h3>Priority Hardware Delivery</h3>
+              <p>Be among the very first to receive our intelligent hardware and AI software before the general launch.</p>
             </div>
 
             <div className="benefit-card reveal" style={{ '--delay': '0.2s' }}>

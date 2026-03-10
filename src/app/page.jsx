@@ -452,7 +452,7 @@ export default function HomePage() {
         <div className="marquee-track">
           {[...Array(2)].map((_, i) => (
             <span key={`c-${i}`}>
-              join&nbsp;early&nbsp;access&nbsp;·&nbsp;
+              download&nbsp;app&nbsp;·&nbsp;
               <span className="marquee-accent">UniBand</span>
               &nbsp;·&nbsp;smart&nbsp;wearable&nbsp;·&nbsp;lecture&nbsp;companion&nbsp;·&nbsp;
             </span>
@@ -464,7 +464,7 @@ export default function HomePage() {
       < section className="cta-section" >
         <div className="container cta-inner">
           <div className="reveal">
-            <h2>Join early access</h2>
+            <h2>Apply for Early Access</h2>
             <p>
               Get early updates, a free sample summary workflow, and be first in
               line for student discounts at launch.
@@ -474,7 +474,7 @@ export default function HomePage() {
             className="btn primary"
             href="/get-started"
           >
-            Join Early Access
+            Apply for Early Access
           </Link>
         </div>
       </section >

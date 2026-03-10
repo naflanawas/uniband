@@ -70,9 +70,6 @@ export default function Footer() {
             {/* Bottom bar */}
             <div className="footer-bottom-bar">
                 <div className="container footer-bottom-inner">
-                    <div className="footer-bottom-left">
-                        <span>© 2026 UniBand. All rights reserved.</span>
-                    </div>
                     <div className="footer-bottom-contact">
                         <span>Email: <a href="mailto:hello@uniband.app">hello@uniband.app</a></span>
                     </div>
