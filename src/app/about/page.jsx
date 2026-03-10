@@ -10,10 +10,10 @@ import PageShell from '../../components/PageShell'
 export default function AboutPage() {
   return (
     <PageShell
-      title="About UniBand"
-      subtitle="We believe every student deserves a personal lecture companion — regardless of language, learning style, or background."
+      title="About Us"
+      subtitle="We believe everyone deserves a personal lecture companion — regardless of language, learning style, or background."
     >
-      
+
       {/* Mission statement */}
       <section className="section">
         <div className="container">
@@ -30,10 +30,10 @@ export default function AboutPage() {
               incomplete, attention is divided, and learning suffers.
             </p>
             <p>
-              UniBand was created to solve this. We're building a smart wearable
-              that captures lectures hands-free, then uses AI to transform recordings
+              Our AI wearable was created to solve this. We're building a smart device
+              that captures lectures hands-free, then uses artificial intelligence to transform recordings
               into clean transcriptions, structured summaries, and multilingual
-              translations — all delivered to your phone in real-time.
+              translations — all delivered to your phone instantly.
             </p>
           </div>
         </div>
@@ -43,21 +43,21 @@ export default function AboutPage() {
       <section className="section alt">
         <div className="container about-story-grid">
           <div className="about-story-image reveal">
-            <img src="/images/aboutUs.png" alt="The UniBand story - AI lecture recorder wearable device" />
+            <img src="/images/aboutUs.png" alt="Our story - AI lecture recorder wearable device" />
             <div className="about-story-quote-card">
               <p>"Making learning accessible, one lecture at a time"</p>
-              <span>UniBand Team</span>
+              <span>The Founding Team</span>
             </div>
           </div>
           <div className="about-story-content reveal" style={{ '--delay': '0.15s' }}>
             <p className="eyebrow" style={{ color: 'var(--accent)' }}>Our Story</p>
-            <h2>Born from a real student struggle</h2>
+            <h2>Born from a genuine struggle</h2>
             <p>
-              UniBand started when our founders — university students in Sri Lanka —
-              realized that attending English-medium lectures while thinking in
+              The journey started when our founders — attending university in Sri Lanka —
+              realized that attending English-medium classes while thinking in
               Sinhala or Tamil meant they were always one step behind. Writing notes
-              meant missing what the lecturer said next. Not writing meant forgetting
-              everything after class.
+              meant missing what the professor said next. Not writing meant forgetting
+              everything after the session.
             </p>
             <blockquote className="about-quote">
               "We wanted a device that could sit on your wrist, quietly record
@@ -65,9 +65,9 @@ export default function AboutPage() {
               you lifting a pen."
             </blockquote>
             <p>
-              That idea became UniBand: a wearable-first platform that combines
+              That idea evolved into our core product: a wearable-first platform that combines
               speech recognition, AI summarisation, and real-time translation to
-              give every student an unfair advantage in the lecture hall.
+              give every learner an unfair advantage in the hall.
             </p>
           </div>
         </div>
@@ -77,7 +77,7 @@ export default function AboutPage() {
       <section className="section">
         <div className="container">
           <p className="eyebrow reveal" style={{ color: 'var(--accent)', textAlign: 'center' }}>Who It's For</p>
-          <h2 className="reveal" style={{ textAlign: 'center', marginBottom: '3rem', '--delay': '0.05s' }}>Built for students like you</h2>
+          <h2 className="reveal" style={{ textAlign: 'center', marginBottom: '3rem', '--delay': '0.05s' }}>Built for learners like you</h2>
           <div className="about-audience-grid">
             <div className="about-audience-card reveal" style={{ '--delay': '0.1s' }}>
               <div className="about-audience-icon">
@@ -97,15 +97,15 @@ export default function AboutPage() {
               <div className="about-audience-icon">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" /><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" /></svg>
               </div>
-              <h4>STEM Students</h4>
-              <p>Complex theory-heavy modules need full attention. Let UniBand handle the notes while you absorb the concepts.</p>
+              <h4>STEM Majors</h4>
+              <p>Complex theory-heavy modules need full attention. Let our device handle the notes while you absorb the concepts.</p>
             </div>
             <div className="about-audience-card reveal" style={{ '--delay': '0.25s' }}>
               <div className="about-audience-icon">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
               </div>
               <h4>Accessibility Needs</h4>
-              <p>Students with hearing difficulties or learning differences get AI-powered support in and outside class.</p>
+              <p>Individuals with hearing difficulties or learning differences get AI-powered support in and outside class.</p>
             </div>
           </div>
         </div>
@@ -128,32 +128,31 @@ export default function AboutPage() {
               <div className="about-value-icon">
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" /></svg>
               </div>
-              <h3>Student-Centred</h3>
-              <p>Every feature we build starts with a real student problem. We test with real students, in real lectures, solving real frustrations.</p>
+              <h3>User-Centred</h3>
+              <p>Every feature we build starts with an actual problem. We test with active undergraduates, in live environments, solving genuine frustrations.</p>
             </div>
             <div className="about-value-card reveal" style={{ '--delay': '0.2s' }}>
               <div className="about-value-icon">
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
               </div>
               <h3>Accessible Excellence</h3>
-              <p>Premium learning tools shouldn't cost premium prices. We're committed to keeping UniBand affordable for every student worldwide.</p>
+              <p>Premium learning tools shouldn't cost premium prices. We're committed to keeping our technology affordable for everyone worldwide.</p>
             </div>
           </div>
         </div>
       </section>
 
 
-      {/* CTA */}
       <section className="section cta">
         <div className="container cta-inner">
           <div>
             <h2>Ready to transform how you learn?</h2>
             <p className="lead">
-              Join thousands of students who are already on the early access list.
+              Download the app today and start capturing your lectures smarter.
             </p>
           </div>
           <Link className="btn primary" href="/get-started">
-            Join Early Access
+            Download App
           </Link>
         </div>
       </section>
