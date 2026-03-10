@@ -1,6 +1,12 @@
-import { Link } from 'react-router-dom'
+'use client'
 
-export default function Footer({ variant = 'dark' }) {
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+
+export default function Footer() {
+    const pathname = usePathname()
+    const isHome = pathname === '/'
+    const variant = isHome ? 'dark' : 'light'
     return (
         <footer className={`footer ${variant}`}>
             {/* Main footer grid */}
@@ -8,8 +14,8 @@ export default function Footer({ variant = 'dark' }) {
                 <div>
                     <h4>Product</h4>
                     <div className="footer-links">
-                        <Link to="/features">Features</Link>
-                        <Link to="/get-started">Early Access</Link>
+                        <Link href="/features">Features</Link>
+                        <Link href="/get-started">Early Access</Link>
                         <span>Pricing (Coming Soon)</span>
                         <span>Docs (Coming Soon)</span>
                     </div>
@@ -17,8 +23,8 @@ export default function Footer({ variant = 'dark' }) {
                 <div>
                     <h4>Resources</h4>
                     <div className="footer-links">
-                        <Link to="/blog">Blog</Link>
-                        <Link to="/about">About Us</Link>
+                        <Link href="/blog">Blog</Link>
+                        <Link href="/about">About Us</Link>
                         <span>Support</span>
                         <span>FAQ</span>
                     </div>
@@ -26,7 +32,7 @@ export default function Footer({ variant = 'dark' }) {
                 <div>
                     <h4>Company</h4>
                     <div className="footer-links">
-                        <Link to="/about">Our Story</Link>
+                        <Link href="/about">Our Story</Link>
                         <a href="mailto:hello@uniband.app">Contact Us</a>
                         <span>Careers</span>
                         <span>Partners</span>
@@ -35,8 +41,8 @@ export default function Footer({ variant = 'dark' }) {
                 <div>
                     <h4>Legal</h4>
                     <div className="footer-links">
-                        <Link to="/privacy">Privacy Policy</Link>
-                        <Link to="/terms">Terms of Service</Link>
+                        <Link href="/privacy">Privacy Policy</Link>
+                        <Link href="/terms">Terms of Service</Link>
                         <span>Cookie Policy</span>
                     </div>
                 </div>

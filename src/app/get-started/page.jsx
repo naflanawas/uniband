@@ -1,6 +1,11 @@
-import { Helmet } from 'react-helmet-async'
-import { Link } from 'react-router-dom'
-import PageShell from '../components/PageShell'
+
+export const metadata = {
+  title: 'Get Started - Apply for UniBand Early Access',
+  description: 'Apply for UniBand Early Access to test our smart wearable and AI-powered app before public release.',
+}
+
+import Link from 'next/link'
+import PageShell from '../../components/PageShell'
 
 export default function GetStartedPage() {
   return (
@@ -8,10 +13,7 @@ export default function GetStartedPage() {
       title="Apply for UniBand Early Access"
       subtitle="Be among the first students to test UniBand’s smart wearable and AI-powered app before public release."
     >
-      <Helmet>
-        <title>Get Started - Apply for UniBand Early Access</title>
-        <meta name="description" content="Apply for UniBand Early Access to test our smart wearable and AI-powered app before public release." />
-      </Helmet>
+      
       <section className="section">
         <div className="container contact-grid-centered">
           <div className="contact-form-wrap reveal" style={{ textAlign: 'center', padding: '4rem 2rem' }}>

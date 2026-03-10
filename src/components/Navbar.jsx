@@ -1,15 +1,20 @@
+'use client'
+
 import { useState } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { navItems } from '../data/constants'
 
-export default function Navbar({ variant = 'dark' }) {
+export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false)
-    const location = useLocation()
+    const pathname = usePathname()
+    const isHome = pathname === '/'
+    const variant = isHome ? 'dark' : 'light'
 
     return (
         <header className={`navbar ${variant}`}>
             <div className="container navbar-inner">
-                <Link className="logo" to="/" onClick={() => setMenuOpen(false)}>
+                <Link className="logo" href="/" onClick={() => setMenuOpen(false)}>
                     UniBand
                 </Link>
 
@@ -28,8 +33,8 @@ export default function Navbar({ variant = 'dark' }) {
                     {navItems.map((item) => (
                         <Link
                             key={item.to}
-                            to={item.to}
-                            className={`nav-link ${location.pathname === item.to ? 'active' : ''}`}
+                            href={item.to}
+                            className={`nav-link ${pathname === item.to ? 'active' : ''}`}
                             onClick={() => setMenuOpen(false)}
                         >
                             {item.label}
@@ -37,7 +42,7 @@ export default function Navbar({ variant = 'dark' }) {
                     ))}
                     <Link
                         className="btn primary nav-cta"
-                        to="/get-started"
+                        href="/get-started"
                         onClick={() => setMenuOpen(false)}
                     >
                         Join Early Access
@@ -45,7 +50,7 @@ export default function Navbar({ variant = 'dark' }) {
                 </nav>
 
                 {/* Desktop CTA (visible only on larger screens) */}
-                <Link className="btn primary desktop-cta" to="/get-started">
+                <Link className="btn primary desktop-cta" href="/get-started">
                     Join Early Access
                 </Link>
             </div>

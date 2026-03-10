@@ -1,16 +1,18 @@
-import { Helmet } from 'react-helmet-async'
-import { Link } from 'react-router-dom'
-import { Fragment, useState } from 'react'
+
+export const metadata = {
+  title: 'UniBand - AI-Powered Lecture Recorder Wearable',
+  description: 'Capture every word with the UniBand AI lecture recorder wearable. Get real-time transcriptions, smart summaries, and translated notes effortlessly.',
+}
+
+import Link from 'next/link'
+import { Fragment } from 'react'
+import VideoPlayer from '../components/VideoPlayer'
 
 export default function HomePage() {
-  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
   return (
     <main className="home">
-      <Helmet>
-        <title>UniBand - AI-Powered Lecture Recorder Wearable</title>
-        <meta name="description" content="Capture every word with the UniBand AI lecture recorder wearable. Get real-time transcriptions, smart summaries, and translated notes effortlessly." />
-      </Helmet>
+
       {/* ── 1. Motion Hero Section ── */}
       <section className="hero-section">
         {/* Ambient glow effects */}
@@ -75,7 +77,7 @@ export default function HomePage() {
             <span style={{ marginRight: '0.5rem' }}></span> Limited Beta: Selected students receive early hardware access and 6 months of Pro features.
           </div>
           <div className="hero-actions hero-anim" style={{ '--anim-delay': '0.5s' }}>
-            <Link className="btn ghost" to="/about">
+            <Link className="btn ghost" href="/about">
               How It Works
             </Link>
           </div>
@@ -144,40 +146,10 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div
-            className="mission-video-container reveal"
-            style={{ '--delay': '0.1s' }}
-            onClick={() => setIsVideoPlaying(true)}
-          >
-            {!isVideoPlaying ? (
-              <>
-                <img
-                  src="https://img.youtube.com/vi/Y91Bf2lBcM8/maxresdefault.jpg"
-                  alt="UniBand Solution Video Thumbnail"
-                  className="video-thumbnail"
-                />
-                <div className="play-button-overlay">
-                  <div className="play-button">
-                    <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
-                  </div>
-                </div>
-              </>
-            ) : (
-              <iframe
-                className="mission-video"
-                src="https://www.youtube.com/embed/Y91Bf2lBcM8?autoplay=1&controls=1&showinfo=0&rel=0&modestbranding=1"
-                title="UniBand YouTube Video"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-              ></iframe>
-            )}
-            <div className="video-overlay-glow" />
-          </div>
+          <VideoPlayer />
 
           <div className="mission-actions reveal" style={{ '--delay': '0.2s' }}>
-            <Link className="btn primary" to="/about">
+            <Link className="btn primary" href="/about">
               Learn More
             </Link>
           </div>
@@ -499,9 +471,8 @@ export default function HomePage() {
             </p>
           </div>
           <Link
-            className="btn primary reveal"
-            style={{ '--delay': '0.1s' }}
-            to="/get-started"
+            className="btn primary"
+            href="/get-started"
           >
             Join Early Access
           </Link>

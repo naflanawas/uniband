@@ -29,3 +29,11 @@ lerna-debug.log*
 # Misc
 *.sw?
 Screen Recording *
+
+# Next.js
+/.next/
+/out/
+/build
+.vercel/
+next-env.d.ts
+*.tsbuildinfo

@@ -1,6 +1,11 @@
-import { Helmet } from 'react-helmet-async'
-import { Link } from 'react-router-dom'
-import PageShell from '../components/PageShell'
+
+export const metadata = {
+  title: 'About Us - UniBand AI Lecture Recorder',
+  description: 'Learn about our mission to reimagine how students capture and understand their lectures with the UniBand AI lecture wearable device.',
+}
+
+import Link from 'next/link'
+import PageShell from '../../components/PageShell'
 
 export default function AboutPage() {
   return (
@@ -8,10 +13,7 @@ export default function AboutPage() {
       title="About UniBand"
       subtitle="We believe every student deserves a personal lecture companion — regardless of language, learning style, or background."
     >
-      <Helmet>
-        <title>About Us - UniBand AI Lecture Recorder</title>
-        <meta name="description" content="Learn about our mission to reimagine how students capture and understand their lectures with the UniBand AI lecture wearable device." />
-      </Helmet>
+      
       {/* Mission statement */}
       <section className="section">
         <div className="container">
@@ -150,7 +152,7 @@ export default function AboutPage() {
               Join thousands of students who are already on the early access list.
             </p>
           </div>
-          <Link className="btn primary" to="/get-started">
+          <Link className="btn primary" href="/get-started">
             Join Early Access
           </Link>
         </div>

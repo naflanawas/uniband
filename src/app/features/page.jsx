@@ -1,6 +1,11 @@
-import { Helmet } from 'react-helmet-async'
-import { Link } from 'react-router-dom'
-import PageShell from '../components/PageShell'
+
+export const metadata = {
+  title: 'Features - UniBand AI Lecture Transcription & Summaries',
+  description: "Explore UniBand's powerful AI features: real-time transcription, smart summaries, multi-language translation, and more.",
+}
+
+import Link from 'next/link'
+import PageShell from '../../components/PageShell'
 
 export default function FeaturesPage() {
   const features = [
@@ -53,10 +58,7 @@ export default function FeaturesPage() {
       title="Lecture Transcription and AI Summaries for Students"
       subtitle="Everything you need to record lectures, transcribe spoken content into text, and generate summaries that make studying easier."
     >
-      <Helmet>
-        <title>Features - UniBand AI Lecture Transcription & Summaries</title>
-        <meta name="description" content="Explore UniBand's powerful AI features: real-time transcription, smart summaries, multi-language translation, and more." />
-      </Helmet>
+
       {/* Mission statement */}
       <section className="section features-mission">
         <div className="container">
@@ -142,7 +144,7 @@ export default function FeaturesPage() {
                 <li><span className="check">✓</span> 7-day archive</li>
                 <li className="pricing-feature-hardware"><span className="cross">✗</span> Wearable band requires Pro</li>
               </ul>
-              <Link className="btn ghost pricing-btn" to="/get-started">Get Started</Link>
+              <Link className="btn ghost pricing-btn" href="/get-started">Get Started</Link>
             </div>
 
             {/* Pro — highlighted */}
@@ -164,7 +166,7 @@ export default function FeaturesPage() {
                 <li><span className="check">✓</span> Unlimited archive & search</li>
                 <li><span className="check">✓</span> Export & share</li>
               </ul>
-              <Link className="btn primary pricing-btn" to="/get-started">Get Started</Link>
+              <Link className="btn primary pricing-btn" href="/get-started">Get Started</Link>
             </div>
 
             {/* University */}
@@ -183,7 +185,7 @@ export default function FeaturesPage() {
                 <li><span className="check">✓</span> Priority support</li>
                 <li><span className="check">✓</span> Custom deployment</li>
               </ul>
-              <Link className="btn ghost pricing-btn" to="/get-started">Contact Us</Link>
+              <Link className="btn ghost pricing-btn" href="/get-started">Contact Us</Link>
             </div>
           </div>
         </div>
@@ -198,7 +200,7 @@ export default function FeaturesPage() {
               Join early access and explore how UniBand helps students record, transcribe, and summarise lectures more effectively.
             </p>
           </div>
-          <Link className="btn primary" to="/get-started">
+          <Link className="btn primary" href="/get-started">
             Join Early Access
           </Link>
         </div>
