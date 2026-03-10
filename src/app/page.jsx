@@ -1,7 +1,7 @@
 
 export const metadata = {
-  title: 'UniBand - AI-Powered Lecture Recorder Wearable',
-  description: 'Capture every word with the UniBand AI lecture recorder wearable. Get real-time transcriptions, smart summaries, and translated notes effortlessly.',
+  title: 'UniBand - AI Notetaker & Lecture Recorder Wearable',
+  description: 'Capture every word with the UniBand AI notetaker wearable. Get real-time transcriptions, smart summaries, and translated notes effortlessly.',
 }
 
 import Link from 'next/link'
@@ -45,7 +45,7 @@ export default function HomePage() {
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10" /><line x1="2" y1="12" x2="22" y2="12" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
           </div>
           <div>
-            <strong>Multi-Language Translation</strong>
+            <strong>Automated Translation</strong>
             <span>Understand in your native language</span>
           </div>
         </div>
@@ -64,14 +64,14 @@ export default function HomePage() {
         <div className="hero-content">
 
           <h1 className="hero-title hero-anim" style={{ '--anim-delay': '0.2s' }}>
-            AI Note Taking
+            The AI Notetaker
             <br />
             for Smarter Lectures
             <br />
             & <span className="accent-word">Faster Revision.</span>
           </h1>
           <p className="hero-subtitle hero-anim" style={{ '--anim-delay': '0.4s', marginBottom: '1rem' }}>
-            UniBand is an AI note taking and lecture transcription tool designed for university students. Record lectures, generate clear summaries, and turn class content into searchable study material for faster revision.
+            UniBand is a dedicated AI notetaker and lecture transcription tool designed for university students. Record lectures, generate clear summaries, and turn class content into searchable study material.
           </p>
           <div className="muted hero-anim" style={{ '--anim-delay': '0.45s', marginBottom: '2.5rem', fontSize: '0.95rem', background: 'rgba(255,255,255,0.05)', padding: '0.5rem 1rem', borderRadius: 'var(--radius)', display: 'inline-block' }}>
             <span style={{ marginRight: '0.5rem' }}></span> Limited Beta: Selected students receive early hardware access and 6 months of Pro features.
@@ -122,7 +122,7 @@ export default function HomePage() {
               Manual Note-Taking Slows Students Down.
             </h2>
             <p className="problem-desc">
-              Traditional note-taking makes it difficult to capture every key point in fast-paced lectures. UniBand solves this with AI note taking, lecture transcription, and automatic lecture summaries that help students learn more efficiently.
+              Traditional note-taking makes it difficult to capture every key point in fast-paced lectures. UniBand acts as your personal AI notetaker, combining lecture transcription and automatic summaries to help students learn more efficiently.
             </p>
           </div>
           <div className="problem-image reveal" style={{ '--delay': '0.12s' }}>
@@ -139,10 +139,10 @@ export default function HomePage() {
           <div className="mission-content reveal">
             <p className="eyebrow" style={{ color: 'var(--accent)' }}>Our Solution</p>
             <h2 className="mission-heading">
-              <span className="accent-word">AI Note Taking</span> Built for University Lectures.
+              An <span className="accent-word">AI Notetaker</span> Built for University Lectures.
             </h2>
             <p className="mission-desc">
-              UniBand helps students record lectures, transcribe spoken content into text, and generate structured summaries for revision. This makes it easier to review lessons, find important ideas, and study more effectively.
+              UniBand helps students record lectures, transcribe spoken content into text, and generate structured summaries for revision. This smart AI notetaker makes it easier to review lessons and study more effectively.
             </p>
           </div>
 
@@ -162,7 +162,7 @@ export default function HomePage() {
           <div className="features-header reveal">
             <p className="eyebrow">Features</p>
             <h2 className="features-heading">
-              AI Note Taking, Lecture Transcription and Smart Study Tools
+              Your Complete AI Notetaker: Transcription & Smart Study Tools
             </h2>
           </div>
           <div className="features-grid">
@@ -218,7 +218,7 @@ export default function HomePage() {
           <div className="showcase-image reveal">
             <img
               src="/images/wristband.png"
-              alt="UniBand AI lecture recorder wearable interface concept"
+              alt="UniBand AI notetaker wearable interface concept"
             />
           </div>
           <div className="showcase-text reveal" style={{ '--delay': '0.12s' }}>
@@ -264,7 +264,7 @@ export default function HomePage() {
           <div className="showcase-image reveal">
             <img
               src="/images/mb.png"
-              alt="UniBand AI lecture recorder wearable in minimal lighting"
+              alt="UniBand AI notetaker wearable device in minimal lighting"
             />
           </div>
           <div className="showcase-text reveal" style={{ '--delay': '0.12s' }}>
@@ -454,7 +454,7 @@ export default function HomePage() {
             <span key={`c-${i}`}>
               download&nbsp;app&nbsp;·&nbsp;
               <span className="marquee-accent">UniBand</span>
-              &nbsp;·&nbsp;smart&nbsp;wearable&nbsp;·&nbsp;lecture&nbsp;companion&nbsp;·&nbsp;
+              &nbsp;·&nbsp;smart&nbsp;wearable&nbsp;·&nbsp;ai&nbsp;notetaker&nbsp;·&nbsp;
             </span>
           ))}
         </div>

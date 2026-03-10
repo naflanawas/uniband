@@ -1,7 +1,7 @@
 
 export const metadata = {
-  title: 'Features - UniBand AI Audio Conversion & Notes',
-  description: "Explore our powerful AI capabilities: real-time text conversion, smart study guides, multi-language translation, and more.",
+  title: 'Features - UniBand AI Lecture Recorder & Notes',
+  description: "Explore our powerful AI lecture recorder capabilities: real-time text conversion, smart study guides, multi-language translation, and more.",
 }
 
 import Link from 'next/link'
@@ -26,8 +26,8 @@ export default function FeaturesPage() {
       icon: (
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10" /><polygon points="10 8 16 12 10 16 10 8" /></svg>
       ),
-      title: 'One-Tap Session Recording',
-      desc: 'Start recording classes instantly with a single tap, creating organised audio files ready for processing and review.',
+      title: 'One-Tap Lecture Recorder',
+      desc: 'Capture classes instantly with our dedicated lecture recorder, creating organised audio files ready for AI processing.',
     },
     {
       icon: (
@@ -68,8 +68,8 @@ export default function FeaturesPage() {
 
   return (
     <PageShell
-      title="Audio Conversion and AI Tools for Students"
-      subtitle="Everything you need to record classes, convert spoken content into text, and generate notes that make studying easier."
+      title="The Ultimate AI Lecture Recorder and Study Tool"
+      subtitle="Everything you need to securely record classes, convert spoken content into text, and generate notes that make studying easier."
     >
 
       {/* Mission statement */}
@@ -132,11 +132,11 @@ export default function FeaturesPage() {
       <section className="section pricing-section">
         <div className="container">
           <p className="eyebrow reveal" style={{ color: 'var(--accent)', textAlign: 'center' }}>Pricing Plan</p>
-          <h2 className="pricing-heading reveal" style={{ '--delay': '0.05s' }}>Student-Friendly Pricing for AI Note Taking</h2>
+          <h2 className="pricing-heading reveal" style={{ '--delay': '0.05s' }}>Student-Friendly Pricing for Your Lecture Recorder</h2>
           <p className="pricing-subtitle reveal" style={{ '--delay': '0.1s' }}>Start free. Upgrade when you need more power.</p>
 
           <div className="pricing-positioning reveal" style={{ '--delay': '0.12s', textAlign: 'center', maxWidth: '700px', margin: '0 auto 3rem auto', color: 'var(--text-light-muted)', lineHeight: '1.6' }}>
-            <p><strong>Our platform gives students affordable access to audio recording, AI text generation, and study guides all in one place.</strong></p>
+            <p><strong>Our platform gives students affordable access to a smart lecture recorder, AI text generation, and study guides all in one place.</strong></p>
             <p style={{ fontSize: '0.9rem', marginTop: '0.5rem' }}><em>Note: The hardware is a one-time purchase. Software subscription plans (below) unlock advanced AI capabilities.</em></p>
           </div>
 
@@ -208,9 +208,9 @@ export default function FeaturesPage() {
       <section className="section cta">
         <div className="container cta-inner">
           <div>
-            <h2>Ready to Try Intelligent Audio and AI Note Taking?</h2>
+            <h2>Ready to Try the Ultimate AI Lecture Recorder?</h2>
             <p className="lead">
-              Sign up today and explore how our app helps learners record, convert, and review classes more effectively.
+              Sign up today and explore how our intelligent lecture recorder helps you capture, convert, and review classes more effectively.
             </p>
           </div>
           <Link className="btn primary" href="/get-started">
